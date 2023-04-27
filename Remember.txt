@@ -1,0 +1,7 @@
+
+// create a new program
+dotnet new console
+
+// Run program in C# in the terminal
+dotnet run
+

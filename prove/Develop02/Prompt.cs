@@ -17,10 +17,14 @@ public class Prompt
         _prompts.Add("What's your favorite: season, color, place, or food? Describe it.");
         _prompts.Add("When you're feeling down, what makes you feel better?");
         _prompts.Add("What's your ideal morning routine?");
-        _prompts.Add("");
-        _prompts.Add("");
-        _prompts.Add("");
-        _prompts.Add("");
+        _prompts.Add("How are you feeling today?");
+        _prompts.Add("If you could only accomplish one thing today, what would it be?");
+        _prompts.Add("What are your favorite songs? Why?");
+        _prompts.Add("What's your favorite movie? Why?");
+        _prompts.Add("What's your favorite book? Why?");
+        _prompts.Add("What is your favorite memory of your spouse?");
+        _prompts.Add("What was your wedding day like?");
+        _prompts.Add("What was it like when your first child was born?");
     }
 
 

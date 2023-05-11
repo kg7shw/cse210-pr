@@ -33,11 +33,5 @@ public class Prompt
         return $"{_prompts}";
     }
 
-    // public string GetRandomPrompt()
-    // {
-    //     var random = new Random();
-    //     var randomNumber = random.Next(0, _prompts.Count);
-    //     FormattedPrint(_prompts[randomNumber].GetPrompt(_prompts[randomNumber]));return "This is prompt";
-    // }
 
 }

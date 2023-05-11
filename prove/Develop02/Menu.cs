@@ -32,10 +32,10 @@ public class Menu
                     Console.Write("[W]rite in your journal without a prompt");
                     Console.Write("[A]dd your own prompt and write a journal entry");
                     Console.Write("\nWhat would you like to do? ");
-                    response = Console.ReadLine() ?? String.Empty;
-                    response = response.ToUpper();
+                    string Subresponse = Console.ReadLine() ?? String.Empty;
+                    Subresponse = Subresponse.ToUpper();
 
-                    switch (response)
+                    switch (Subresponse)
                     {
                         case "G":
                             // GetRandomPrompt()
@@ -52,21 +52,21 @@ public class Menu
 
                             // AddPrompt()
                             Console.Write("Please enter your entry: ");
-                            string entry = Console.ReadLine() ?? String.Empty;
+                            entry = Console.ReadLine() ?? String.Empty;
                             Console.Write("Please enter your title: ");
-                            string title = Console.ReadLine() ?? String.Empty;
+                            title = Console.ReadLine() ?? String.Empty;
                             Console.Write("Please enter your author: ");
-                            string author = Console.ReadLine() ?? String.Empty;
+                            author = Console.ReadLine() ?? String.Empty;
 
                             _journal.AddEntry(new Entry(entry, title, author));
                             break;
                         case "W":
                             Console.Write("Please enter your entry: ");
-                            string entry = Console.ReadLine() ?? String.Empty;
+                            entry = Console.ReadLine() ?? String.Empty;
                             Console.Write("Please enter your title: ");
-                            string title = Console.ReadLine() ?? String.Empty;
+                            title = Console.ReadLine() ?? String.Empty;
                             Console.Write("Please enter your author: ");
-                            string author = Console.ReadLine() ?? String.Empty;
+                            author = Console.ReadLine() ?? String.Empty;
 
                             _journal.AddEntry(new Entry(entry, title, author));
                             break;

@@ -1,7 +1,13 @@
 public class Journal
 {
     List<Entry> _entries = new List<Entry>();
-}
+ private void FormattedPrint(string item)
+ {
+    Console.WriteLine("-----------------------------");
+    Console.WriteLine($"{item}");
+    Console.WriteLine("-----------------------------");
+ }   
+
 
 public void AddEntry(Entry entry)
 {
@@ -16,3 +22,6 @@ public void ShowEntry()
         FormattedPrint(entry.GetEntry());
     }
 }
+
+}
+

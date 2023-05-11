@@ -7,11 +7,9 @@ public class Entry
     private string _author = "";
 
 
-    public Entry(string entry, Prompt prompt, DateTime date, string title, string author)
+    public Entry(string entry, string title, string author)
     {
         _entry = entry;
-        _prompt = prompt;
-        _date = date;
        _title = title;
         _author = author;
     }

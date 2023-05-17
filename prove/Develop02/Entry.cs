@@ -46,4 +46,20 @@ public class Entry
     {
         return $"Prompt: {_prompt}\n{_entry}";
     }
+
+    public string GetTitle()
+    {
+        return $"Title: {_title}";
+    }
+
+    public string GetAuthor()
+    {
+        return $"Author: {_author}";
+    }
+
+    public string GetDate()
+    {
+        return $"Title: {_date}";
+    }
+
 }

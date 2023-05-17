@@ -7,11 +7,9 @@ public class Menu
     private string _fileName = "";
     private string new_prompt = "";
 
-    public Menu(Journal journal, Prompt prompt, string fileName)
+    public Menu(Journal journal)
     {
         _journal = journal;
-        _prompt = prompt;
-        _fileName = fileName;
     }
 
     public void Display()
@@ -82,7 +80,7 @@ public class Menu
                                 case "G":
                                     // GetRandomPrompt()
 
-                                   new_prompt = _journal.GetRandomPrompt();
+                                    new_prompt = _journal.GetRandomPrompt();
                                     Console.Write("Please enter who is writing the Journal entry: ");
                                     string author = Console.ReadLine() ?? String.Empty;
                                     Console.Write("Please enter the title of your entry: ");
@@ -99,22 +97,23 @@ public class Menu
                             
                                     new_prompt = Console.ReadLine() ?? String.Empty;
                                     _prompt.AddPrompt(new_prompt);
+                                    Console.Write("Please enter who is writing the Journal entry: ");
+                                    author = Console.ReadLine() ?? String.Empty;
+                                    Console.Write("Please enter the title of your entry: ");
+                                    title = Console.ReadLine() ?? String.Empty;
                                     Console.Write("Please enter your entry: ");
                                     entry = Console.ReadLine() ?? String.Empty;
-                                    Console.Write("Please enter your title: ");
-                                    title = Console.ReadLine() ?? String.Empty;
-                                    Console.Write("Please enter your author: ");
-                                    author = Console.ReadLine() ?? String.Empty;
 
                                     _journal.AddEntry(new Entry(new_prompt, entry, title, author));
                                     break;
                                 case "W":
+                                    new_prompt = "";
+                                    Console.Write("Please enter who is writing the Journal entry: ");
+                                    author = Console.ReadLine() ?? String.Empty;
+                                    Console.Write("Please enter the title of your entry: ");
+                                    title = Console.ReadLine() ?? String.Empty;
                                     Console.Write("Please enter your entry: ");
                                     entry = Console.ReadLine() ?? String.Empty;
-                                    Console.Write("Please enter your title: ");
-                                    title = Console.ReadLine() ?? String.Empty;
-                                    Console.Write("Please enter your author: ");
-                                    author = Console.ReadLine() ?? String.Empty;
 
                                     _journal.AddEntry(new Entry(new_prompt, author, title, entry));
                                     break;
@@ -152,10 +151,6 @@ public class Menu
                         //             // Journal.FindEntriesByAuthor(author);
                         //             break;
                         //     }
-
-
-                    
-                            break;
 
                         case "R":
                             // _journal.GetRandomentry();

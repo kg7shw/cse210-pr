@@ -58,8 +58,8 @@ public string GetRandomPrompt()
         {
             foreach (Entry entry in _entries)
             {
-                // string entryLine = $"{entry.GetEntry()},{entry.GetTitle()},{entry.GetAuthor()},{entry.GetDate()}";
-                // writer.WriteLine(entryLine);
+                string entryLine = $"{entry.GetEntry()},{entry.GetTitle()},{entry.GetAuthor()},{entry.GetDate()}";
+                writer.WriteLine(entryLine);
             }
         }
 

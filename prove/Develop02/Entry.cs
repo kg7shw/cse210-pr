@@ -61,5 +61,11 @@ public class Entry
     {
         return $"Title: {_date}";
     }
+    public string GetPrompt()
+    {
+        return $"Title: {_prompt}";
+    }
+
+
 
 }

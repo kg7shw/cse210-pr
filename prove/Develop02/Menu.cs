@@ -47,7 +47,7 @@ public class Menu
                 case "L":
                     Console.Write("Enter the filename to load the journal from (including extension): ");
                     
-                    _fileName = Console.ReadLine()?.ToUpper() ?? String.Empty;
+                    _fileName = Console.ReadLine() ?? String.Empty;
                         // Load the existing file
                         _journal.LoadJournalFromFile(_fileName);
                     

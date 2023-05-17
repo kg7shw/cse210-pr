@@ -42,8 +42,7 @@ public string GetRandomPrompt()
 {
    var random = new Random();
    var randomNumber = random.Next(0, _prompts.Count);
-   string new_prompt = "";
-   FormattedPrint(_prompts[randomNumber].GetPrompt());
+   string new_prompt = _prompts[randomNumber].GetPrompt();
    return new_prompt;
 
 }

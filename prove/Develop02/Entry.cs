@@ -3,13 +3,14 @@ public class Entry
     private string _entry = "";
     private string _title = "";
     private DateTime _date = DateTime.Now;
+    private string _NewPrompt = "";
     private Prompt _prompt;
     private string _author = "";
 
 
-    public Entry(string new_prompt, string author, string title, string entry)
+    public Entry(string prompt, string author, string title, string entry)
     {
-        _prompt = new_prompt;
+        _NewPrompt = prompt;
         _author = author;
         _title = title;
         _entry = entry;

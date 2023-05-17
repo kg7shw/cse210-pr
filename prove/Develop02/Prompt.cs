@@ -28,6 +28,12 @@ public class Prompt
     }
 
 
+    public void AddPrompt(string prompt)
+    {
+        _prompts.Add(prompt);
+    }
+
+
         public string GetPrompt()
     {
         return $"{_prompts}";

@@ -7,11 +7,13 @@ public class Entry
     private string _author = "";
 
 
-    public Entry(string entry, string title, string author)
+    public Entry(string new_prompt, string author, string title, string entry)
     {
-        _entry = entry;
-       _title = title;
+        _prompt = new_prompt;
         _author = author;
+        _title = title;
+        _entry = entry;
+
     }
 
 

@@ -1,12 +1,18 @@
+using System.IO;
+
 public class Journal
 {
     List<Entry> _entries = new List<Entry>();
     List<Prompt> _prompts = new List<Prompt>();
+    private string fileName = "";
+    private string new_prompt = "";
+
+
  private void FormattedPrint(string item)
  {
-    Console.WriteLine("-----------------------------");
+    
     Console.WriteLine($"{item}");
-    Console.WriteLine("-----------------------------");
+    
  }   
 
 
@@ -32,11 +38,13 @@ public void ShowPrompt()
 }
 
 
-public void GetRandomPrompt()
+public string GetRandomPrompt()
 {
    var random = new Random();
    var randomNumber = random.Next(0, _prompts.Count);
+   string new_prompt = "";
    FormattedPrint(_prompts[randomNumber].GetPrompt());
+   return new_prompt;
 
 }
 
@@ -44,10 +52,9 @@ public void GetRandomPrompt()
 
     public void SaveJournalToFile()
     {
-        Console.WriteLine("Enter the filename to save the journal (without extension):");
-        string fileName = Console.ReadLine();
+        
 
-        using (StreamWriter writer = new StreamWriter(fileName + ".csv"))
+        using (StreamWriter writer = new StreamWriter(fileName))
         {
             foreach (Entry entry in _entries)
             {
@@ -59,21 +66,17 @@ public void GetRandomPrompt()
         Console.WriteLine("Journal saved to file successfully.");
     }
 
-    public void LoadJournalFromFile()
+    public void LoadJournalFromFile(string fileName)
     {
-        Console.WriteLine("Enter the filename to load the journal from (including extension):");
-        string fileName = Console.ReadLine();
-
+        
         if (File.Exists(fileName))
         {
-            _entries.Clear();
-
             using (StreamReader reader = new StreamReader(fileName))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] entryData = line.Split(',');
+                    string[] entryData = line.Split('|');
 
                     if (entryData.Length == 4)
                     {
@@ -85,7 +88,7 @@ public void GetRandomPrompt()
 
                         if (DateTime.TryParse(dateString, out date))
                         {
-                            Entry entry = new Entry(entryText, title, author);
+                            Entry entry = new Entry(new_prompt, author, title, entryText);
                             _entries.Add(entry);
                         }
                     }
@@ -96,7 +99,17 @@ public void GetRandomPrompt()
         }
         else
         {
-            Console.WriteLine("File not found.");
+            Console.WriteLine("File not found. Creating a new file.");
+            CreateNewFile(fileName);
+            LoadJournalFromFile(fileName);
+        }
+    }
+
+    public void CreateNewFile(string fileName)
+    {
+        using (StreamWriter writer = new StreamWriter(fileName))
+        {
+            Console.WriteLine("New file created: " + fileName);
         }
     }
 

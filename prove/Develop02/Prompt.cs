@@ -27,6 +27,13 @@ public class Prompt
         _prompts.Add("What was it like when your first child was born?");
     }
 
+    private void FormattedPrint(string item)
+    {
+        
+        Console.WriteLine($"{item}");
+        
+    } 
+
 
     public void AddPrompt(string prompt)
     {
@@ -38,6 +45,27 @@ public class Prompt
     {
         return $"{_prompts}";
     }
+
+    public string GetRandomPrompt()
+    {
+        var random = new Random();
+        var randomNumber = random.Next(_prompts.Count);
+        string new_prompt = _prompts[randomNumber];
+        return new_prompt;
+
+    }
+
+    public void ShowPrompt()
+    {
+        foreach (string prompt in _prompts)
+        {
+            FormattedPrint(prompt);
+        }
+    }
+
+
+
+
 
 
 }

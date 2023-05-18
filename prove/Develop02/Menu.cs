@@ -39,8 +39,9 @@ public class Menu
                     Environment.Exit(0);
                     break;
                 case "S":
-                Console.WriteLine("Enter the filename to save the journal (without extension):");
+                Console.WriteLine("Enter the filename to save the journal:");
                 _fileName = Console.ReadLine() ?? String.Empty;
+                _journal.fileName = _fileName;
                     _journal.SaveJournalToFile();
                     break;
                 
@@ -80,11 +81,12 @@ public class Menu
                                 case "G":
                                     // GetRandomPrompt()
 
-                                    new_prompt = _journal.GetRandomPrompt();
                                     Console.Write("Please enter who is writing the Journal entry: ");
                                     string author = Console.ReadLine() ?? String.Empty;
                                     Console.Write("Please enter the title of your entry: ");
                                     string title = Console.ReadLine() ?? String.Empty;
+                                    new_prompt = _journal._prompt.GetRandomPrompt();
+                                    Console.WriteLine(new_prompt);
                                     Console.Write("Please enter your entry: ");
                                     string entry = Console.ReadLine() ?? String.Empty;
 
@@ -121,8 +123,8 @@ public class Menu
 
                             
                             break;
-                        case "S":
-                            _journal.ShowEntry();
+                        case "D":
+                            _journal.DisplayJournal();
                             break;
                         // case "F":
                         //     Console.WriteLine("Search by: [T]itle");

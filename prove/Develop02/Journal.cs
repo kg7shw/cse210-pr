@@ -3,8 +3,8 @@ using System.IO;
 public class Journal
 {
     List<Entry> _entries = new List<Entry>();
-    List<Prompt> _prompts = new List<Prompt>();
-    private string fileName = "";
+    public Prompt _prompt = new Prompt();
+    public string fileName = "";
     private string new_prompt = "";
 
 
@@ -22,31 +22,13 @@ public void AddEntry(Entry entry)
 }
 
 
-public void ShowEntry()
+public void DisplayJournal()
 {
     foreach (Entry entry in _entries)
     {
-        FormattedPrint(entry.GetEntry());
+        entry.Display();
     }
 }
-public void ShowPrompt()
-{
-    foreach (Prompt prompt in _prompts)
-    {
-        FormattedPrint(prompt.GetPrompt());
-    }
-}
-
-
-public string GetRandomPrompt()
-{
-   var random = new Random();
-   var randomNumber = random.Next(0, _prompts.Count);
-   string new_prompt = _prompts[randomNumber].GetPrompt();
-   return new_prompt;
-
-}
-
 
 
     public void SaveJournalToFile()
@@ -57,7 +39,7 @@ public string GetRandomPrompt()
         {
             foreach (Entry entry in _entries)
             {
-                string entryLine = $"{entry.GetEntry()},{entry.GetTitle()},{entry.GetAuthor()},{entry.GetDate()}";
+                string entryLine = $"{entry.GetPrompt()}|{entry.GetAuthor()}|{entry.GetTitle()}|{entry.GetEntry()}|{entry.GetDate()}";
                 writer.WriteLine(entryLine);
             }
         }
@@ -77,19 +59,18 @@ public string GetRandomPrompt()
                 {
                     string[] entryData = line.Split('|');
 
-                    if (entryData.Length == 4)
+                    if (entryData.Length == 5)
                     {
-                        string entryText = entryData[0];
-                        string title = entryData[1];
-                        string author = entryData[2];
-                        string dateString = entryData[3];
-                        DateTime date;
+                        string prompt = entryData[0];
+                        string author = entryData[1];
+                        string title = entryData[2];
+                        string entryText = entryData[3];
+                        string dateString = entryData[4];
 
-                        if (DateTime.TryParse(dateString, out date))
-                        {
-                            Entry entry = new Entry(new_prompt, author, title, entryText);
-                            _entries.Add(entry);
-                        }
+                        Entry entry = new Entry(prompt, author, title, entryText, dateString);
+                        _entries.Add(entry);
+                        
+                        
                     }
                 }
             }

@@ -1,0 +1,60 @@
++---------------------------------------+
+|               Program                 |
++---------------------------------------+
+| - main(args: String[]): void          |
++---------------------------------------+
+
++---------------------------------------+
+|             Scripture                 |
++---------------------------------------+
+| - reference: Reference                |
+| - text: String                        |
+| - hiddenWords: List<Word>             |
++---------------------------------------+
+| + Scripture(reference: Reference,     |
+|     text: String)                     |
+| + displayScripture(): void            |
+| + hideRandomWords(): void             |
+| + areAllWordsHidden(): boolean        |
+| - selectRandomWord(): Word            |
+| - hideWord(word: Word): void          |
++---------------------------------------+
+
++---------------------------------------+
+|             Reference                 |
++---------------------------------------+
+| - book: String                        |
+| - chapter: int                        |
+| - startVerse: int                     |
+| - endVerse: int                       |
++---------------------------------------+
+| + Reference(book: String,             |
+|     chapter: int, startVerse: int)    |
+| + Reference(book: String,             |
+|     chapter: int, startVerse: int,    |
+|     endVerse: int)                    |
+| + getFormattedReference(): String     |
++---------------------------------------+
+
++---------------------------------------+
+|              Word                     |
++---------------------------------------+
+| - text: String                        |
+| - hidden: boolean                     |
++---------------------------------------+
+| + Word(text: String)                  |
+| + getText(): String                   |
+| + isHidden(): boolean                 |
+| + setHidden(hidden: boolean): void    |
++---------------------------------------+
+
++---------------------------------------+
+|               Menu                    |
++---------------------------------------+
+| - options: List<String>               |
++---------------------------------------+
+| + Menu()                              |
+| + addOption(option: String): void     |
+| + displayMenu(): void                 |
+| + getUserChoice(): int                |
++---------------------------------------+

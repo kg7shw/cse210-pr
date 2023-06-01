@@ -6,9 +6,9 @@ public class MathAssignment : Assignment
 
 
 
-    public MathAssignment(string studentName, string topic, string textbookSection, string problems)
+    public MathAssignment(string studentName, string topic, string textbookSection, string problems) : base(studentName, topic)
     {
-        _studentName = studentName;
+        
         _topic = topic;
         _textbookSection = textbookSection;
         _problems = problems;
@@ -17,6 +17,7 @@ public class MathAssignment : Assignment
 
     public string GetHomeworkList()
     {
-        return $"{_studentName} - {_topic} \nSection {_textbookSection} Problems {_problems}";
+        string studentName = GetStudentName();
+        return $"{studentName} - {_topic} \nSection {_textbookSection} Problems {_problems}";
     }
 }

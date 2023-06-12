@@ -1,10 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
 public class Menu
 {
-    private Activity activity;
+    private List<Activity> activities;
 
     public Menu()
     {
-        activity = new Activity();
+        activities = new List<Activity>
+        {
+            new BreathingActivity(),
+            new ReflectionActivity(),
+            new ListingActivity()
+        };
     }
 
     public void DisplayMenu()
@@ -24,21 +33,15 @@ public class Menu
             switch (response)
             {
                 case "1":
-                    activity.StartingMessage("Description of breathing activity", "Breathing Activity");
-                    // Perform breathing activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Breathing Activity");
+                    PerformActivity(activities[0]);
                     break;
 
                 case "2":
-                    activity.StartingMessage("Description of reflection activity", "Reflection Activity");
-                    // Perform reflection activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Reflection Activity");
+                    PerformActivity(activities[1]);
                     break;
 
                 case "3":
-                    activity.StartingMessage("Description of listing activity", "Listing Activity");
-                    // Perform listing activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Listing Activity");
+                    PerformActivity(activities[2]);
                     break;
 
                 default:
@@ -46,5 +49,12 @@ public class Menu
                     break;
             }
         }
+    }
+
+    private void PerformActivity(Activity activity)
+    {
+        activity.StartingMessage();
+        activity.PerformActivity();
+        activity.EndingMessage();
     }
 }

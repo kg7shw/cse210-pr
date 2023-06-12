@@ -1,6 +1,14 @@
 public class Menu
 {
-    private Activity activity;
+    private Activity activity = new Activity();
+    private BreathingActivity breathingActivity = new BreathingActivity();
+    private ListingActivity listingActivity = new ListingActivity();
+    private ReflectionActivity reflectionActivity = new ReflectionActivity();
+
+    private int duration;
+
+    private string name;
+    private string description;
 
     public Menu()
     {
@@ -14,8 +22,8 @@ public class Menu
         {
             Console.WriteLine("Mindfulness Program\n");
             Console.WriteLine("1. Breathing Activity");
-            Console.WriteLine("2. Reflection Activity");
-            Console.WriteLine("3. Listing Activity");
+            Console.WriteLine("2. Listing Activity");
+            Console.WriteLine("3. Reflection Activity");
             Console.WriteLine("4. Quit\n");
 
             Console.Write("What do you want to do? ");
@@ -24,21 +32,30 @@ public class Menu
             switch (response)
             {
                 case "1":
-                    activity.StartingMessage("Description of breathing activity", "Breathing Activity");
-                    // Perform breathing activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Breathing Activity");
+                    name = breathingActivity.GetName();
+                    description = breathingActivity.GetDescription();
+                    activity.StartingMessage(description, name);
+                    duration = activity.GetDuration();
+                    breathingActivity.PerformActivity();
+                    activity.EndingMessage(duration, name);
                     break;
 
                 case "2":
-                    activity.StartingMessage("Description of reflection activity", "Reflection Activity");
-                    // Perform reflection activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Reflection Activity");
+                    name = listingActivity.GetName();
+                    description = breathingActivity.GetDescription();
+                    activity.StartingMessage(description, name);
+                    duration = activity.GetDuration();
+                    listingActivity.PerformActivity();
+                    activity.EndingMessage(duration, name);
                     break;
 
                 case "3":
-                    activity.StartingMessage("Description of listing activity", "Listing Activity");
-                    // Perform listing activity logic here
-                    activity.EndingMessage(activity.GetDuration(), "Listing Activity");
+                    name = reflectionActivity.GetName();
+                    description = breathingActivity.GetDescription();
+                    activity.StartingMessage(description, name);
+                    duration = activity.GetDuration();
+                    reflectionActivity.PerformActivity();
+                    activity.EndingMessage(duration, name);
                     break;
 
                 default:

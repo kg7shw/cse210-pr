@@ -5,8 +5,8 @@ using System.Threading;
 public abstract class Activity
 {
     protected int duration;
-    protected string description;
-    protected string name;
+    protected string description = "";
+    protected string name = "";
     protected List<string> animationStrings = new List<string> { "\\", "|", "/", "-" };
 
     public abstract string GetDescription();

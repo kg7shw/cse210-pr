@@ -1,8 +1,8 @@
 public class Activity
 {
-    private int _duration;
-    private string _description;
-    private string _name;
+    protected int _duration;
+    protected string _description;
+    protected string _name;
     List<string> animationStrings = new List<string>();
     List<int> times = new List<int>();
 
@@ -14,18 +14,43 @@ public class Activity
 
     // }
 
+    public virtual string GetDescription()
+    {
+        return _description;
+    }
+    public virtual void PerformActivity()
+    {
+
+    }
+
+    public virtual string GetName()
+    {
+        return _name;
+    }
+
+
+
     public void StartingMessage(string description, string name)
     {
         Console.WriteLine($"Welcome to the {name}\n");
         Console.WriteLine($"{description}\n");
-        Console.Write("How long, in secods would you like your session? ");
-        int duration = int.Parse(Console.ReadLine());
+        
+        Thread.Sleep(3000);
 
     }
+
+    public int GetDuration()
+    {
+        Console.Write("How long, in seconds would you like your session? ");
+        int duration = int.Parse(Console.ReadLine());
+        return duration;
+    }
+
     public void EndingMessage(int duration, string name)
     {
         Console.WriteLine($"Well Done!!!");
         Console.WriteLine($"You have completed another {duration} seconds of the {name}\n");
+        Thread.Sleep(3000);
 
     }
 
@@ -88,6 +113,11 @@ public class Activity
         }
 
     }
+
+
+
+
+
 
 
 

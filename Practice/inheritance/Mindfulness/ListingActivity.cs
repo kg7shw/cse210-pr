@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-
 public class ListingActivity : Activity
 {
     private List<string> listingPrompts = new List<string>

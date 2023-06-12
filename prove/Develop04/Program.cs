@@ -8,9 +8,10 @@ class Program
         // int duration = 10;
         // // test.DisplaySpinnerAnimation(duration);
         // test.CountDownTimer(duration);
-
-
-        
+    {
+        Menu menu = new Menu();
+        menu.DisplayMenu();
+    }
 
 
 

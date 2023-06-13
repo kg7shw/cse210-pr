@@ -3,8 +3,8 @@ public class BreathingActivity : Activity
 
     public BreathingActivity()
     {
-        _name = "Listing Activity";
-        _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+        _name = "Breathing Activity";
+        _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
     public override string GetDescription()
     {

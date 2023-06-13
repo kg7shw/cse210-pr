@@ -35,7 +35,7 @@ public class Menu
                     name = breathingActivity.GetName();
                     description = breathingActivity.GetDescription();
                     activity.StartingMessage(description, name);
-                    duration = activity.GetDuration();
+                    // duration = activity.GetDuration();
                     breathingActivity.PerformActivity();
                     activity.EndingMessage(duration, name);
                     break;
@@ -44,7 +44,7 @@ public class Menu
                     name = listingActivity.GetName();
                     description = breathingActivity.GetDescription();
                     activity.StartingMessage(description, name);
-                    duration = activity.GetDuration();
+                    // duration = activity.GetDuration();
                     listingActivity.PerformActivity();
                     activity.EndingMessage(duration, name);
                     break;
@@ -53,7 +53,7 @@ public class Menu
                     name = reflectionActivity.GetName();
                     description = breathingActivity.GetDescription();
                     activity.StartingMessage(description, name);
-                    duration = activity.GetDuration();
+                    // duration = activity.GetDuration();
                     reflectionActivity.PerformActivity();
                     activity.EndingMessage(duration, name);
                     break;

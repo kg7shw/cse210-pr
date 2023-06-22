@@ -15,7 +15,7 @@ public class Menu
         {
             while(options.Contains(response)==false)
             {
-                Console.Write("[A]dd quote:\n[S]how quptes\n[F]ind quotes by author\n[R]andpm Quote\n[Q]uit\n\nWhat do you want to do? ");
+                Console.Write("[A]dd quote:\n[S]how quotes\n[F]ind quotes by author\n[R]andpm Quote\n[Q]uit\n\nWhat do you want to do? ");
 
                 response = Console.ReadLine() ?? String.Empty;
                 response = response.ToUpper();

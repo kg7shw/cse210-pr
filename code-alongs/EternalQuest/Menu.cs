@@ -1,90 +1,47 @@
 public class Menu
 {
+    
 
 
-    public Menu()
-    {
-        
-    }
 
     public void DisplayMenu()
     {
-        Console.WriteLine("===== Goal Tracker Menu =====");
-        Console.WriteLine("1. Create a goal");
-        Console.WriteLine("2. Record an event");
-        Console.WriteLine("3. Display goals");
-        Console.WriteLine("4. Display score");
-        Console.WriteLine("5. Exit program");
-        Console.Write("Enter your choice: ");
-    }
 
-    public void ProcessChoice(string choice)
-    {
-        switch (choice)
+        string response = "";
+
+        while(response != "Q")
+            Console.WriteLine("======Menu Options======");
+            Console.WriteLine("1. Create New Goal");
+            Console.WriteLine("2. List Goals");
+            Console.WriteLine("3. Save Goals");
+            Console.WriteLine("4. Load Goals");
+            Console.WriteLine("5. Record Event");
+            Console.WriteLine("6. Quit");
+            Console.Write("Select a choice from the menu: ");
+
+            response = Console.ReadLine() ?? String.Empty;
+
+        switch (response)
         {
-            case "1":
-                CreateGoal();
-                break;
-            case "2":
-                RecordEvent();
-                break;
-            case "3":
-                DisplayGoals();
-                break;
-            case "4":
-                DisplayScore();
-                break;
-            case "5":
-                Console.WriteLine("Exiting program...");
+            case "6":
                 Environment.Exit(0);
                 break;
-            default:
-                Console.WriteLine("Invalid choice. Please try again.");
+                
+            case "1":
+                break;
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "5":
                 break;
         }
-    }
+        response = "";
+        
 
-    public void CreateGoal()
-    {
-        Console.Write("Enter the goal type (Simple/Eternal/Checklist): ");
-        string goalType = Console.ReadLine();
 
-        Console.Write("Enter the goal name: ");
-        string goalName = Console.ReadLine();
 
-        Console.Write("Enter the goal value: ");
-        int goalValue = int.Parse(Console.ReadLine());
-
-        if (goalType == "Checklist")
-        {
-            Console.Write("Enter the target count: ");
-            int targetCount = int.Parse(Console.ReadLine());
-            goalTracker.CreateGoal(goalType, goalName, goalValue, targetCount);
-        }
-        else
-        {
-            goalTracker.CreateGoal(goalType, goalName, goalValue);
-        }
-
-        Console.WriteLine("Goal created successfully!");
-    }
-
-    public void RecordEvent()
-    {
-        Console.Write("Enter the goal name: ");
-        string goalName = Console.ReadLine();
-        goalTracker.RecordEvent(goalName);
-    }
-
-    public void DisplayGoals()
-    {
-        goalTracker.DisplayGoals();
-    }
-
-    public void DisplayScore()
-    {
-        goalTracker.DisplayScore();
     }
 }
-
-// Rest of the code...

@@ -1,9 +1,9 @@
 public class Goal
 {
-    private string _name;
-    private string _description;
-    private int _points;
-    private bool _done = false;
+    protected string _name;
+    protected string _description;
+    protected int _points;
+    protected bool _done = false;
 
     public Goal(string name, string description, int points)
     {

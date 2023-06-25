@@ -6,7 +6,7 @@ public class EternalGoal : Goal
 
     public override int Update()
     {
-        // For eternal goals, the points are earned every time the goal is recorded
+        
         return _points;
     }
 }

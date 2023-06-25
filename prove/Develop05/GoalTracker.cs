@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 
 public class GoalTracker
 {
@@ -14,14 +16,27 @@ public class GoalTracker
 
     public void Save()
     {
-        // Implement code to save the goals and score to a file or database
-        // You can use serialization or any other suitable method
+        string jsonString = JsonSerializer.Serialize(_goals);
+        File.WriteAllText("goals.json", jsonString);
+        Console.WriteLine("Goals saved successfully.");
     }
 
     public void Load()
     {
-        // Implement code to load the goals and score from a file or database
-        // You can use deserialization or any other suitable method
+        try
+        {
+            string jsonString = File.ReadAllText("goals.json");
+            _goals = JsonSerializer.Deserialize<List<Goal>>(jsonString);
+            Console.WriteLine("Goals loaded successfully.");
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("No saved goals found.");
+        }
+        catch (JsonException)
+        {
+            Console.WriteLine("Error while loading goals. Invalid file format.");
+        }
     }
 
     public void AddGoal(Goal goal)
@@ -47,5 +62,17 @@ public class GoalTracker
             Console.Write($"{status} ");
             goal.Display();
         }
+    }
+
+    public Goal GetGoalByName(string name)
+    {
+        foreach (var goal in _goals)
+        {
+            if (goal.GetName() == name)
+            {
+                return goal;
+            }
+        }
+        return null;
     }
 }

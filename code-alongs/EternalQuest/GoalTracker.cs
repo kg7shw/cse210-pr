@@ -1,77 +1,32 @@
 public class GoalTracker
 {
-    private List<IGoal> goals;
-    private int score;
+    private List<Goal> _goals = new List<Goal>();
+    private int _score;
+    private string _name;
 
-    public GoalTracker()
+    public GoalTracker(string name)
     {
-        goals = new List<IGoal>();
-        score = 0;
-    }
-    public void CreateGoal(string goalType, string name, int value, int targetCount = 0)
-    {
-        IGoal goal;
-
-        switch (goalType)
-        {
-            case "Simple":
-                goal = new SimpleGoal(name, value);
-                break;
-            case "Eternal":
-                goal = new EternalGoal(name, value);
-                break;
-            case "Checklist":
-                goal = new ChecklistGoal(name, value, targetCount);
-                break;
-            default:
-                throw new ArgumentException("Invalid goal type.");
-        }
-
-        goals.Add(goal);
+        _name = name;
     }
 
-    public void RecordEvent(string goalName)
+    public void Save()
     {
-        IGoal goal = goals.Find(g => g.GetName() == goalName);
+        
+    }
+    public void load()
+    {
 
-        if (goal != null)
+    }
+    public void RecordEvent()
+    {
+        
+    }
+    public void Display()
+    {
+        foreach (var goal in _goals)
         {
-            if (!goal.IsCompleted())
-            {
-                goal.MarkComplete();
-                score += goal.GetPoints();
-                Console.WriteLine("Event recorded for goal: " + goalName);
-            }
-            else
-            {
-                Console.WriteLine("Goal already completed: " + goalName);
-            }
-        }
-        else
-        {
-            Console.WriteLine("Goal not found: " + goalName);
+            Console.WriteLine(goal);
         }
     }
 
-    public void DisplayGoals()
-    {
-        Console.WriteLine("Goals:");
-        foreach (IGoal goal in goals)
-        {
-            string status = goal.IsCompleted() ? "[X]" : "[ ]";
-            string goalDetails = status + " " + goal.GetName();
-
-            if (goal is ChecklistGoal checklistGoal)
-            {
-                goalDetails += " (Completed " + checklistGoal.GetCurrentCount() + "/" + checklistGoal.GetTargetCount() + " times)";
-            }
-
-            Console.WriteLine(goalDetails);
-        }
-    }
-
-    public void DisplayScore()
-    {
-        Console.WriteLine("Score: " + score);
-    }
 }

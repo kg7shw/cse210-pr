@@ -12,24 +12,25 @@ public class Goal
         _points = points;
     }
 
+
     public virtual void Display()
     {
-        Console.WriteLine($"{_name} - {_description} - Points: {_points}");
+        Console.Write($"{_name} ");
+        Console.Write($"{_description} ");
+        Console.Write($"{_points}");
+        
     }
-
     public virtual int Update()
     {
         _done = true;
         return _points;
+        
     }
-
     public virtual bool IsDone()
     {
         return _done;
     }
 
-    public string GetName()
-    {
-        return _name;
-    }
+
+    
 }

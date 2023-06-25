@@ -1,41 +1,9 @@
-public class SimpleGoal : IGoal
+public class SimpleGoal : Goal
 {
-    private string name;
-    private bool completed;
-    private int value;
-    private int points;
+    
 
-    public SimpleGoal(string name, int value)
+    public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
-        this.name = name;
-        this.value = value;
-        completed = false;
-        points = 0;
-    }
-
-    public string GetName()
-    {
-        return name;
-    }
-
-    public bool IsCompleted()
-    {
-        return completed;
-    }
-
-    public int GetValue()
-    {
-        return value;
-    }
-
-    public int GetPoints()
-    {
-        return points;
-    }
-
-    public void MarkComplete()
-    {
-        completed = true;
-        points += value;
+        
     }
 }

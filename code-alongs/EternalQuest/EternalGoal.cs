@@ -1,40 +1,16 @@
-public class EternalGoal : IGoal
+public class EternalGoal : Goal
 {
-    private string name;
-    private bool completed;
-    private int value;
-    private int points;
+    
 
-    public EternalGoal(string name, int value)
+    public EternalGoal(string name, string description, int points) : base(name, description, points)
     {
-        this.name = name;
-        this.value = value;
-        completed = false;
-        points = 0;
+        
     }
 
-    public string GetName()
-    {
-        return name;
-    }
 
-    public bool IsCompleted()
+        public override int Update()
     {
-        return completed;
-    }
-
-    public int GetValue()
-    {
-        return value;
-    }
-
-    public int GetPoints()
-    {
-        return points;
-    }
-
-    public void MarkComplete()
-    {
-        points += value;
+        return _points;
+        
     }
 }

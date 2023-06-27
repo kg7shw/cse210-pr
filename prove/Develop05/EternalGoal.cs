@@ -9,4 +9,9 @@ public class EternalGoal : Goal
         
         return _points;
     }
+
+        public override string GetStringRepresentation()
+    {
+        return $"Simple Goal|{_name}|{_description}|{_points}";
+    }
 }

@@ -2,17 +2,17 @@ class Program
 {
     static void Main()
     {
-        GoalTracker tracker = new GoalTracker("John");
+        GoalTracker tracker = new GoalTracker();
 
         bool quit = false;
         while (!quit)
         {
             Console.WriteLine("======Menu Options======");
-            Console.WriteLine("1. Create New Goal");
-            Console.WriteLine("2. List Goals");
-            Console.WriteLine("3. Save Goals");
-            Console.WriteLine("4. Load Goals");
-            Console.WriteLine("5. Record Event");
+            Console.WriteLine("1. Add Goal");
+            Console.WriteLine("2. Display Goals");
+            Console.WriteLine("3. Record Event");
+            Console.WriteLine("4. Save Goals");
+            Console.WriteLine("5. Load Goals");
             Console.WriteLine("6. Quit");
             Console.Write("Select a choice from the menu: ");
 
@@ -21,63 +21,99 @@ class Program
             switch (choice)
             {
                 case "1":
-                    CreateNewGoal(tracker);
+                    Console.WriteLine("Select goal type:");
+                    Console.WriteLine("1. Simple Goal");
+                    Console.WriteLine("2. Eternal Goal");
+                    Console.WriteLine("3. Checklist Goal");
+                    Console.Write("Enter goal type: ");
+                    string goalType = Console.ReadLine();
+                    Console.WriteLine();
+
+                    Console.Write("Enter goal name: ");
+                    string goalName = Console.ReadLine();
+                    Console.Write("Enter goal description: ");
+                    string goalDescription = Console.ReadLine();
+                    Console.Write("Enter goal points: ");
+                    int points = int.Parse(Console.ReadLine());
+
+                    switch (goalType)
+                    {
+                        case "1":
+                            Goal simpleGoal = new SimpleGoal(goalName, goalDescription, points);
+                            tracker.AddGoal(simpleGoal);
+                            Console.WriteLine("Simple goal added!");
+                            break;
+
+                        case "2":
+                            Goal eternalGoal = new EternalGoal(goalName, goalDescription, points);
+                            tracker.AddGoal(eternalGoal);
+                            Console.WriteLine("Eternal goal added!");
+                            break;
+
+                        case "3":
+                            Console.Write("Enter target count: ");
+                            int targetCount = Convert.ToInt32(Console.ReadLine());
+                            Goal checklistGoal = new ChecklistGoal(goalName, goalDescription, points, targetCount);
+                            tracker.AddGoal(checklistGoal);
+                            Console.WriteLine("Checklist goal added!");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid goal type.");
+                            break;
+                    }
+
+                    Console.WriteLine();
                     break;
+
                 case "2":
                     tracker.DisplayGoals();
+                    Console.WriteLine();
                     break;
+
                 case "3":
-                    tracker.Save();
-                    Console.WriteLine("Goals saved successfully.");
+                    Console.Write("Enter goal name: ");
+                    string eventName = Console.ReadLine();
+                    Goal goal = tracker.GetGoalByName(eventName);
+                    if (goal != null)
+                    {
+                        tracker.RecordEvent(goal);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Goal not found.");
+                    }
+                    Console.WriteLine();
                     break;
+
                 case "4":
-                    tracker.Load();
-                    Console.WriteLine("Goals loaded successfully.");
+                    Console.Write("Enter the file path to save the goals: ");
+                    string savePath = Console.ReadLine();
+                    tracker.Save(savePath);
+                    Console.WriteLine();
                     break;
+
                 case "5":
-                    RecordEvent(tracker);
+                    Console.Write("Enter the file path to load the goals: ");
+                    string loadPath = Console.ReadLine();
+                    tracker.Load(loadPath);
+                    Console.WriteLine();
                     break;
+
                 case "6":
                     quit = true;
+                    Console.Write("Enter the file path to save the goals: ");
+                    savePath = Console.ReadLine();
+                    tracker.Save(savePath);
                     Console.WriteLine("Goodbye!");
                     break;
+
+
                 default:
-                    Console.WriteLine("Invalid choice. Please try again.");
+                    Console.WriteLine("Invalid choice.");
+                    Console.WriteLine();
                     break;
             }
-
-            Console.WriteLine();
-        }
-    }
-
-    static void CreateNewGoal(GoalTracker tracker)
-    {
-        Console.Write("Enter goal name: ");
-        string name = Console.ReadLine();
-        Console.Write("Enter goal description: ");
-        string description = Console.ReadLine();
-        Console.Write("Enter goal points: ");
-        int points = Convert.ToInt32(Console.ReadLine());
-
-        SimpleGoal goal = new SimpleGoal(name, description, points);
-        tracker.AddGoal(goal);
-
-        Console.WriteLine("New goal created successfully.");
-    }
-
-    static void RecordEvent(GoalTracker tracker)
-    {
-        Console.Write("Enter goal name: ");
-        string name = Console.ReadLine();
-
-        Goal goal = tracker.GetGoalByName(name);
-        if (goal != null)
-        {
-            tracker.RecordEvent(goal);
-        }
-        else
-        {
-            Console.WriteLine("Goal not found. Please try again.");
         }
     }
 }

@@ -21,4 +21,16 @@ public class ChecklistGoal : Goal
             return _points;
         }
     }
+
+
+    public override void Display()
+    {
+        Console.WriteLine($"{_name}  ({_description}) -- Currently Completed: {_currentCount}/{_targetCount}");
+    }
+
+
+        public override string GetStringRepresentation()
+    {
+        return $"Simple Goal|{_name}|{_description}|{_points}|{_targetCount}|{_currentCount}";
+    }
 }

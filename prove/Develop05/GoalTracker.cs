@@ -1,43 +1,42 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json;
+using Newtonsoft.Json;
 
 public class GoalTracker
 {
     private List<Goal> _goals = new List<Goal>();
-    private int _score;
-    private string _name;
+    protected int _score = 0;
+    // private string _name;
 
-    public GoalTracker(string name)
+
+
+    public void Save(string filePath)
     {
-        _name = name;
+        // string json = JsonConvert.SerializeObject(_goals, Formatting.Indented);
+        // File.WriteAllText(filePath, json);
+        // Console.WriteLine($"{_goals}");
+        // Console.WriteLine($"{json}");
+        // Console.WriteLine($"Goals saved to file: {filePath} ");
+
+
     }
 
-    public void Save()
+    public void Load(string filePath)
     {
-        string jsonString = JsonSerializer.Serialize(_goals);
-        File.WriteAllText("goals.json", jsonString);
-        Console.WriteLine("Goals saved successfully.");
+        // if (File.Exists(filePath))
+        // {
+        //     string json = File.ReadAllText(filePath);
+        //     _goals = JsonConvert.DeserializeObject<List<Goal>>(json);
+        //     Console.WriteLine($"Goals loaded from file: {filePath}");
+        // }
+        // else
+        // {
+        //     Console.WriteLine($"No file found at path: {filePath}");
+        // }
     }
 
-    public void Load()
-    {
-        try
-        {
-            string jsonString = File.ReadAllText("goals.json");
-            _goals = JsonSerializer.Deserialize<List<Goal>>(jsonString);
-            Console.WriteLine("Goals loaded successfully.");
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("No saved goals found.");
-        }
-        catch (JsonException)
-        {
-            Console.WriteLine("Error while loading goals. Invalid file format.");
-        }
-    }
+
 
     public void AddGoal(Goal goal)
     {
@@ -58,9 +57,10 @@ public class GoalTracker
         Console.WriteLine("Goals:");
         foreach (var goal in _goals)
         {
-            string status = goal.IsDone() ? "[X]" : "[ ]";
+            string status = goal.IsDone() ? "[✓]" : "[ ]";
             Console.Write($"{status} ");
             goal.Display();
+            Console.WriteLine($"Total score: {_score}");
         }
     }
 

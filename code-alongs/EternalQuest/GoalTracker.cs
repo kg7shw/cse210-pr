@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json;
 
 public class GoalTracker
@@ -38,31 +35,7 @@ public class GoalTracker
                     string description = goalData[2];
                     int points = int.Parse(goalData[3]);
 
-                    Goal? goal = null;
-                    switch (goalType)
-                    {
-                        case "Simple Goal":
-                            goal = new SimpleGoal(name, description, points);
-                            break;
-
-                        case "Eternal Goal":
-                            goal = new EternalGoal(name, description, points);
-                            break;
-
-                        case "Checklist Goal":
-                            int targetCount = int.Parse(goalData[4]);
-                            int currentCount = int.Parse(goalData[5]);
-                            goal = new ChecklistGoal(name, description, points, targetCount)
-                            {
-                                Done = currentCount >= targetCount,
-                                _currentCount = currentCount
-                            };
-                            break;
-
-                        default:
-                            Console.WriteLine($"Unknown goal type: {goalType}");
-                            continue;
-                    }
+                    Goal? goal = CreateGoal(goalType, name, description, points, goalData);
 
                     if (goal != null)
                     {
@@ -103,6 +76,32 @@ public class GoalTracker
             goal.Display();
             Console.WriteLine($"Total score: {_score}");
         }
+    }
+
+    public static Goal CreateGoal(string goalType, string name, string description, int points, string[] goalData)
+    {
+        switch (goalType)
+        {
+            case "Simple Goal":
+                return new SimpleGoal(name, description, points);
+
+            case "Eternal Goal":
+                return new EternalGoal(name, description, points);
+
+            case "Checklist Goal":
+                int targetCount = int.Parse(goalData[4]);
+                int currentCount = int.Parse(goalData[5]);
+                var checklistGoal = new ChecklistGoal(name, description, points, targetCount);
+                checklistGoal.Done = currentCount >= targetCount;
+                checklistGoal._currentCount = currentCount;
+                return checklistGoal;
+            default:
+            // Handle unrecognized goal types here
+            Console.WriteLine($"Unrecognized goal type: {goalType}");
+            return null;
+        }
+
+
     }
 
     public Goal? GetGoalByName(string name)

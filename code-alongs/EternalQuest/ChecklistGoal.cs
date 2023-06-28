@@ -1,11 +1,13 @@
 public class ChecklistGoal : Goal
 {
     private int _targetCount;
-    public int _currentCount = 0;
+    public int _currentCount { get; set; }
 
     public ChecklistGoal(string name, string description, int points, int targetCount) : base(name, description, points)
     {
         _targetCount = targetCount;
+       
+
     }
 
     public override int Update()

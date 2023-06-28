@@ -1,36 +1,34 @@
-public class Goal
+public abstract class Goal
 {
-    private string _name;
-    private string _description;
-    private int _points;
-    private bool _done = false;
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int Points { get; set; }
+    public bool Done { get; set; }
+
+    public Goal() { }
 
     public Goal(string name, string description, int points)
     {
-        _name = name;
-        _description = description;
-        _points = points;
+        Name = name;
+        Description = description;
+        Points = points;
     }
-
 
     public virtual void Display()
     {
-        Console.Write($"{_name} ");
-        Console.Write($"{_description} ");
-        Console.Write($"{_points}");
-        
+        Console.WriteLine($"{Name}  ({Description}) - Point value: {Points}");
     }
+
     public virtual int Update()
     {
-        _done = true;
-        return _points;
-        
+        Done = true;
+        return Points;
     }
+
     public virtual bool IsDone()
     {
-        return _done;
+        return Done;
     }
 
-
-    
+    public abstract string GetStringRepresentation();
 }

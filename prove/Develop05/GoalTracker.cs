@@ -13,27 +13,31 @@ public class GoalTracker
 
     public void Save(string filePath)
     {
-        // string json = JsonConvert.SerializeObject(_goals, Formatting.Indented);
-        // File.WriteAllText(filePath, json);
-        // Console.WriteLine($"{_goals}");
-        // Console.WriteLine($"{json}");
-        // Console.WriteLine($"Goals saved to file: {filePath} ");
+        string jsonResult = JsonConvert.SerializeObject(_goals, Formatting.Indented);
+        using (var tw = new StreamWriter(filePath, true))
+        {
+        tw.WriteLine(jsonResult.ToString());
+        tw.Close();
+        }
+        Console.WriteLine($"{_goals}");
+        Console.WriteLine($"{jsonResult}");
+        Console.WriteLine($"Goals saved to file: {filePath} ");
 
 
     }
 
     public void Load(string filePath)
     {
-        // if (File.Exists(filePath))
-        // {
-        //     string json = File.ReadAllText(filePath);
-        //     _goals = JsonConvert.DeserializeObject<List<Goal>>(json);
-        //     Console.WriteLine($"Goals loaded from file: {filePath}");
-        // }
-        // else
-        // {
-        //     Console.WriteLine($"No file found at path: {filePath}");
-        // }
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            _goals = JsonConvert.DeserializeObject<List<Goal>>(json);
+            Console.WriteLine($"Goals loaded from file: {filePath}");
+        }
+        else
+        {
+            Console.WriteLine($"No file found at path: {filePath}");
+        }
     }
 
 

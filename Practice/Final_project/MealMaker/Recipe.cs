@@ -38,6 +38,36 @@ public class Recipe
         _instructions.Add(instructions);
     }
 
+        public void DisplayIngredientsInfoItems() // MealItems = Receipies
+    {
+        foreach (IngredientsInfo option in _ingredientsinfo)
+        {
+            option.DisplayIngredientsInfo();
+
+        }
+    }
+
+    public void DisplayInstructions()
+    {
+        foreach (var item in _instructions)
+        {
+            Console.WriteLine(item);
+        }
+    }
+
+
+    public void DisplayRecipeName()
+    {
+        Console.WriteLine(_name);
+    }
+
+    public void DisplayRecipe()
+    {
+        DisplayRecipeName();
+        DisplayIngredientsInfoItems();
+        DisplayInstructions();
+    }
+
 
 
 }

@@ -21,11 +21,21 @@ public class Meal
 
     public void DisplayMealItems() // MealItems = Receipies
     {
+
+        int i = 1;
         foreach (Recipe option in _recipes)
         {
+            Console.Write($"{i++}. ");
             option.DisplayRecipeName();
 
+
         }
+    }
+
+    public Recipe GetMeal(int mealNumber)
+    {
+        return _recipes[mealNumber - 1];
+
     }
     public void MakeMeal()
     {   

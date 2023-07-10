@@ -51,14 +51,14 @@ public class Recipe
     {
         foreach (var item in _instructions)
         {
-            Console.WriteLine(item);
+            Console.Write(item);
         }
     }
 
 
     public void DisplayRecipeName()
     {
-        Console.WriteLine(_name);
+        Console.Write(_name);
     }
 
     public void DisplayRecipe()

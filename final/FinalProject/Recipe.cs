@@ -19,16 +19,38 @@ public class Recipe
     }
     public void SetIngredientsInfo()
     {
+        Console.WriteLine("=======================================");
+        bool quit = false;
+        while (!quit)
+        {
         
-        Console.Write("Enter ingredient: ");
-        string ingredient = Console.ReadLine() ?? String.Empty;
-        Console.Write("Enter the quantity: ");
-        string quantity = Console.ReadLine() ?? String.Empty;
-        Console.Write("Enter any additional information: ");
-        string extraInfo = Console.ReadLine() ?? String.Empty;
+            // Console.Write("Do you want to add an Ingredient?(y/n) ");
+            // string response = Console.ReadLine() ?? String.Empty;
 
-        IngredientsInfo ii = new IngredientsInfo(ingredient, quantity, extraInfo);
+            
 
+                
+                Console.Write("Enter ingredient: ");
+                string ingredient = Console.ReadLine() ?? String.Empty;
+                if (ingredient.ToLower() == "stop"){
+                    quit = true;
+                    DisplayIngredientsInfoItems();
+                    Console.WriteLine("Thank you for listing the ingredients!");
+                    Console.WriteLine("=======================================");
+                } else
+                {
+                
+                Console.Write("Enter the quantity: ");
+                string quantity = Console.ReadLine() ?? String.Empty;
+                Console.Write("Enter any additional information: ");
+                string extraInfo = Console.ReadLine() ?? String.Empty;
+
+                IngredientsInfo ii = new IngredientsInfo(ingredient, quantity, extraInfo);
+                _ingredientsinfo.Add(ii);
+                }
+            
+
+        }
     }
     public void SetInstructions()
     {
@@ -38,7 +60,7 @@ public class Recipe
         _instructions.Add(instructions);
     }
 
-        public void DisplayIngredientsInfoItems() // MealItems = Receipies
+        public void DisplayIngredientsInfoItems()
     {
         foreach (IngredientsInfo option in _ingredientsinfo)
         {

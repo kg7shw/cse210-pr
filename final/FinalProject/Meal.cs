@@ -73,6 +73,10 @@ public class Meal
         
     }
 
+    public void AddRecipe(Recipe r)
+    {
+        _recipes.Add(r);
+    }
 
     public void DisplayMeal()
     {

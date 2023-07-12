@@ -1,13 +1,6 @@
 public class Menu
 {
-    private FileHandler fileHandler;
-    private Recipe[] recipes;
 
-    public Menu(FileHandler fileHandler, Recipe[] recipes)
-    {
-        this.fileHandler = fileHandler;
-        this.recipes = recipes;
-    }
 
 
     private Meal meal;
@@ -29,8 +22,7 @@ public class Menu
             Console.WriteLine("======Menu Options======");
             Console.WriteLine("1. Add a recipe");
             Console.WriteLine("2. Make a meal");
-            Console.WriteLine("3. Change recipes file");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("3. Quit");
             Console.Write("Select a choice from the menu: ");
 
             string choice = Console.ReadLine();
@@ -44,17 +36,20 @@ public class Menu
 
                     
                 case "2":
+                    meal = new Meal();
                     // Console.Write("What meal would you like? ");
                     // meal.DisplayMealItems();
                     // int mealNumber = int.Parse(Console.ReadLine());
                     // recipe = meal.GetMeal(mealNumber);
                     // recipe.DisplayRecipe();
+                    // recipe.DisplayIngredientsInfoItems();
+                    // recipe.DisplayInstructions();
+                    recipe.DisplayRecipeName();
+                    // recipe.DisplayRecipe();
                     meal.MakeMeal();
                     break;
-                // case "3":
-                //         
-                //         break;
-                case "4":
+
+                case "3":
                     quit = true;
                     Console.WriteLine("Have a nice day!");
                     break;

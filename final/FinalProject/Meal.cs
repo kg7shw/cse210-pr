@@ -19,7 +19,7 @@ public class Meal
         _name = Console.ReadLine() ?? String.Empty;
     }
 
-    public void DisplayMealItems() // MealItems = Receipies
+    public void DisplayMealItems()
     {
 
         int i = 1;
@@ -32,6 +32,8 @@ public class Meal
         }
     }
 
+
+
     public Recipe GetMeal(int mealNumber)
     {
         return _recipes[mealNumber - 1];
@@ -42,6 +44,7 @@ public class Meal
         bool done = false;
         while (!done)
         {
+            
             Console.Write("Would you like to add a meal item?(y/n) ");
             string response = Console.ReadLine() ?? String.Empty;
             response = response.ToLower();

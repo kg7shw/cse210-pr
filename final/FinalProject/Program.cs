@@ -2,8 +2,14 @@ using System;
 
 class Program
 {
+    private FileHandler fileHandler;
+    private Recipe[] recipes;
+
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello FinalProject World!");
+
+
+        Menu menu = new Menu();
+        menu.DisplayMenu();
     }
 }

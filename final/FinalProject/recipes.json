@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Chicken Curry",
+    "servingSize": "4",
+    "ingredientsinfo": [
+      {
+        "ingredient": "Chicken",
+        "quantity": "500g",
+        "extraInfo": "Boneless, cut into pieces"
+      },
+      {
+        "ingredient": "Onion",
+        "quantity": "1",
+        "extraInfo": "Large, finely chopped"
+      },
+      {
+        "ingredient": "Tomato",
+        "quantity": "2",
+        "extraInfo": "Medium, diced"
+      },
+      {
+        "ingredient": "Garlic",
+        "quantity": "4 cloves",
+        "extraInfo": "Minced"
+      },
+      {
+        "ingredient": "Ginger",
+        "quantity": "1-inch piece",
+        "extraInfo": "Grated"
+      },
+      {
+        "ingredient": "Curry Powder",
+        "quantity": "2 teaspoons",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Turmeric",
+        "quantity": "1/2 teaspoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Coconut Milk",
+        "quantity": "1 can",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "To taste",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Oil",
+        "quantity": "2 tablespoons",
+        "extraInfo": ""
+      }
+    ],
+    "instructions": [
+      "Heat oil in a pan over medium heat.",
+      "Add onions and cook until they become translucent.",
+      "Add garlic and ginger, and sauté for a minute.",
+      "Add chicken pieces and cook until they are browned.",
+      "Add curry powder and turmeric. Stir well to coat the chicken.",
+      "Add diced tomatoes and cook for a few minutes until they soften.",
+      "Pour in the coconut milk and season with salt.",
+      "Simmer for about 20 minutes until the chicken is cooked through and the sauce thickens.",
+      "Serve hot with rice or naan bread."
+    ]
+  },
+  {
+    "name": "Pancakes",
+    "servingSize": "4",
+    "ingredientsinfo": [
+      {
+        "ingredient": "All-Purpose Flour",
+        "quantity": "1 cup",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Milk",
+        "quantity": "1 cup",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Egg",
+        "quantity": "1",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Sugar",
+        "quantity": "1 tablespoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Baking Powder",
+        "quantity": "1 teaspoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Salt",
+        "quantity": "1/4 teaspoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Butter",
+        "quantity": "2 tablespoons",
+        "extraInfo": "Melted"
+      },
+      {
+        "ingredient": "Vanilla Extract",
+        "quantity": "1/2 teaspoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Maple Syrup",
+        "quantity": "For serving",
+        "extraInfo": ""
+      }
+    ],
+    "instructions": [
+      "In a mixing bowl, whisk together flour, sugar, baking powder, and salt.",
+      "In a separate bowl, beat the egg. Add milk, melted butter, and vanilla extract. Whisk until well combined.",
+      "Pour the wet ingredients into the dry ingredients. Stir until just combined; do not overmix.",
+      "Heat a non-stick pan or griddle over medium heat. Pour 1/4 cup of batter onto the pan for each pancake.",
+      "Cook until bubbles form on the surface, then flip the pancake and cook for another minute or until golden brown.",
+      "Serve the pancakes hot with maple syrup."
+    ]
+  },
+  {
+    "name": "Hot Chocolate",
+    "servingSize": "2",
+    "ingredientsinfo": [
+      {
+        "ingredient": "Milk",
+        "quantity": "2 cups",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Cocoa Powder",
+        "quantity": "2 tablespoons",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Sugar",
+        "quantity": "2 tablespoons",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Vanilla Extract",
+        "quantity": "1/2 teaspoon",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Whipped Cream",
+        "quantity": "For topping",
+        "extraInfo": ""
+      },
+      {
+        "ingredient": "Chocolate Shavings",
+        "quantity": "For garnish",
+        "extraInfo": ""
+      }
+    ],
+    "instructions": [
+      "In a saucepan, heat the milk over medium heat until hot but not boiling.",
+      "In a separate bowl, whisk together cocoa powder and sugar.",
+      "Gradually add the cocoa powder mixture to the hot milk, whisking constantly until smooth and well combined.",
+      "Remove from heat and stir in vanilla extract.",
+      "Pour the hot chocolate into mugs. Top with whipped cream and chocolate shavings.",
+      "Serve immediately."
+    ]
+  },
+  {
+    "name": "Bacon",
+    "servingSize": "2",
+    "ingredientsinfo": [
+      {
+        "ingredient": "Bacon",
+        "quantity": "4 slices",
+        "extraInfo": ""
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 400°F (200°C).",
+      "Place the bacon slices in a single layer on a baking sheet.",
+      "Bake for about 15-20 minutes or until crispy, flipping halfway through.",
+      "Remove from the oven and transfer the bacon to a paper towel-lined plate to drain excess grease.",
+      "Serve the bacon hot."
+    ]
+  }
+]

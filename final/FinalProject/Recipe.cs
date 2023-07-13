@@ -2,8 +2,8 @@ public class Recipe
 {
     private string _name { get; set; }
     private string _servingSize { get; set; }
-    List<IngredientsInfo> _ingredientsinfo = new List<IngredientsInfo>();
-    List<string> _instructions = new List<string>();
+    List<IngredientsInfo> _ingredientsinfo { get; set; } = new List<IngredientsInfo>();
+    List<string> _instructions { get; set; } = new List<string>();
     
     // public Recipe(string name, List<IngredientsInfo> ingredientsinfo, List<string> instructions)
     // {

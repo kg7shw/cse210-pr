@@ -2,7 +2,7 @@ public class Meal
 {
     private string _name { get; set; }
 
-    List<Recipe> _recipes = new List<Recipe>();
+    List<Recipe> _recipes { get; set; } = new List<Recipe>();
 
     public Meal()
     {

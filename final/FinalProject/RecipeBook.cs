@@ -1,6 +1,6 @@
 public class RecipeBook
 {
-    List<Recipe> _recipes = new List<Recipe>();
+    List<Recipe> _recipes { get; set; } = new List<Recipe>();
     public void AddRecipe(Recipe r)
     {
         _recipes.Add(r);

@@ -2,7 +2,10 @@ public class Menu
 {
     public MealManager mealDriver { get; set; }
 
-    
+    public Menu()
+    {
+        
+    }
 
     public void DisplayMenu()
     {

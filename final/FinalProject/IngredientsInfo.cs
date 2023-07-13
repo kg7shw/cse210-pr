@@ -1,15 +1,15 @@
 public class IngredientsInfo
 {
-    private string _ingredient;
-    private string _quantity;
-    private string _extraInfo;
+    public string _ingredient { get; set; }
+    public string _quantity { get; set; }
+    public string _extraInfo { get; set; }
     // private int _prepTime;
     // private int _cookTime;
     // private int _totalTime;
 
     public IngredientsInfo()
     {
-        
+
     }
 
     public IngredientsInfo(string ingredient, string quantity, string extraInfo)

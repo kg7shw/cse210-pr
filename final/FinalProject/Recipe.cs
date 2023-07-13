@@ -1,16 +1,16 @@
 public class Recipe
 {
-    private string _name;
-    private string _servingSize;
+    private string _name { get; set; }
+    private string _servingSize { get; set; }
     List<IngredientsInfo> _ingredientsinfo = new List<IngredientsInfo>();
     List<string> _instructions = new List<string>();
     
-    public Recipe(string name, List<IngredientsInfo> ingredientsinfo, List<string> instructions)
-    {
-        _name = name;
-        _ingredientsinfo = ingredientsinfo;
-        _instructions = instructions;
-    }
+    // public Recipe(string name, List<IngredientsInfo> ingredientsinfo, List<string> instructions)
+    // {
+    //     _name = name;
+    //     _ingredientsinfo = ingredientsinfo;
+    //     _instructions = instructions;
+    // }
     // public Recipe()
     // {
     //     SetName();
@@ -20,7 +20,7 @@ public class Recipe
 
     public Recipe()
     {
-        
+
     }
 
     public void GetInfo()

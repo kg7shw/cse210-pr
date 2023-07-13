@@ -1,6 +1,6 @@
 public class Meal
 {
-    private string _name;
+    private string _name { get; set; }
 
     List<Recipe> _recipes = new List<Recipe>();
 

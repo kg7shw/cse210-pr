@@ -11,6 +11,12 @@ public class RecipeBook
         return _recipes;
     }
 
+
+    public void SetRecipes(List<Recipe> newRecipes)
+    {
+        _recipes = newRecipes;
+    }
+
     public void DisplayRecipes()
     {
 

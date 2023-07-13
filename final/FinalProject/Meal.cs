@@ -6,15 +6,26 @@ public class Meal
 
     public Meal()
     {
-        SetMealName();
+        
 
     }
 
+    public Meal(string name)
+    {
+        _name = name;
+    }
 
-    public void SetMealName()
+
+    public string SetMealName()
     {
         Console.Write("What is the name of this meal? ");
         _name = Console.ReadLine() ?? String.Empty;
+        return _name;
+    }
+
+    public string GetName()
+    {
+        return _name;
     }
 
     // public void DisplayMealItems()

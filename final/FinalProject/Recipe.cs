@@ -5,12 +5,31 @@ public class Recipe
     List<IngredientsInfo> _ingredientsinfo = new List<IngredientsInfo>();
     List<string> _instructions = new List<string>();
     
+    public Recipe(string name, List<IngredientsInfo> ingredientsinfo, List<string> instructions)
+    {
+        _name = name;
+        _ingredientsinfo = ingredientsinfo;
+        _instructions = instructions;
+    }
+    // public Recipe()
+    // {
+    //     SetName();
+    //     SetIngredientsInfo();
+    //     SetInstructions();
+    // }
+
     public Recipe()
+    {
+        
+    }
+
+    public void GetInfo()
     {
         SetName();
         SetIngredientsInfo();
         SetInstructions();
     }
+
 
     public void SetName()
     {
@@ -23,13 +42,6 @@ public class Recipe
         bool quit = false;
         while (!quit)
         {
-        
-            // Console.Write("Do you want to add an Ingredient?(y/n) ");
-            // string response = Console.ReadLine() ?? String.Empty;
-
-            
-
-                
                 Console.Write("Enter ingredient: ");
                 string ingredient = Console.ReadLine() ?? String.Empty;
                 if (ingredient.ToLower() == "stop"){
@@ -54,10 +66,26 @@ public class Recipe
     }
     public void SetInstructions()
     {
-        Console.Write("Enter the Instructions: ");
-        string instructions = Console.ReadLine() ?? String.Empty;
+        bool quit = false;
+        while (!quit)
+        {
 
-        _instructions.Add(instructions);
+            Console.Write("Enter the Instructions for the recipe: ");
+            string instructions = Console.ReadLine() ?? String.Empty;
+
+            
+
+            if (instructions.ToLower() == "stop"){
+                quit = true;
+                
+                Console.WriteLine("Thank you for listing the instructions!");
+                
+            } else
+            {
+            
+                _instructions.Add(instructions);
+            }
+        }
     }
 
         public void DisplayIngredientsInfoItems()

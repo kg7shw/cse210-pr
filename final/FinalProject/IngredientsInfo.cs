@@ -7,7 +7,10 @@ public class IngredientsInfo
     // private int _cookTime;
     // private int _totalTime;
 
-    
+    public IngredientsInfo()
+    {
+        
+    }
 
     public IngredientsInfo(string ingredient, string quantity, string extraInfo)
     {

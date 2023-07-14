@@ -1,8 +1,8 @@
 public class IngredientsInfo
 {
-    public string _ingredient { get; set; }
-    public string _quantity { get; set; }
-    public string _extraInfo { get; set; }
+    public string Ingredient { get; set; }
+    public string Quantity { get; set; }
+    public string ExtraInfo { get; set; }
     // private int _prepTime;
     // private int _cookTime;
     // private int _totalTime;
@@ -14,9 +14,9 @@ public class IngredientsInfo
 
     public IngredientsInfo(string ingredient, string quantity, string extraInfo)
     {
-        _ingredient = ingredient;
-        _quantity = quantity;
-        _extraInfo = extraInfo;
+        Ingredient = ingredient;
+        Quantity = quantity;
+        ExtraInfo = extraInfo;
     }
 
     // public int SetTotalTime(int prepTime, int cookTime)
@@ -26,6 +26,6 @@ public class IngredientsInfo
 
     public void DisplayIngredientsInfo()
     {
-        Console.WriteLine($"{_quantity} {_ingredient} - {_extraInfo}");
+        Console.WriteLine($"{Quantity} {Ingredient} - {ExtraInfo}");
     }
 }

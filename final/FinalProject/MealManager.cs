@@ -1,8 +1,8 @@
 public class MealManager
 {
-    public RecipeBook recipeBook { get; set; }
-    public List<Recipe> recipes { get; set; }
-    public Meal meal { get; set; }
+    public RecipeBook recipeBook { get; set; } = new RecipeBook();
+    public List<Recipe> recipes { get; set; } = new List<Recipe>();
+    public Meal meal { get; set; } = new Meal();
 
     public MealManager()
     {

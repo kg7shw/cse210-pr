@@ -1,15 +1,15 @@
 public class Recipe
 {
-    private string _name { get; set; }
-    private string _servingSize { get; set; }
-    List<IngredientsInfo> _ingredientsinfo { get; set; } = new List<IngredientsInfo>();
-    List<string> _instructions { get; set; } = new List<string>();
+    public string Name { get; set; }
+    public string ServingSize { get; set; }
+    public List<IngredientsInfo> IngredientsInfo { get; set; } = new List<IngredientsInfo>();
+    public List<string> Instructions { get; set; } = new List<string>();
     
     // public Recipe(string name, List<IngredientsInfo> ingredientsinfo, List<string> instructions)
     // {
-    //     _name = name;
-    //     _ingredientsinfo = ingredientsinfo;
-    //     _instructions = instructions;
+    //     Name = name;
+    //     IngredientsInfo = ingredientsinfo;
+    //     Instructions = instructions;
     // }
     // public Recipe()
     // {
@@ -34,7 +34,7 @@ public class Recipe
     public void SetName()
     {
         Console.Write("What is the name of this recipe? ");
-        _name = Console.ReadLine() ?? String.Empty;
+        Name = Console.ReadLine() ?? String.Empty;
     }
     public void SetIngredientsInfo()
     {
@@ -58,7 +58,7 @@ public class Recipe
                 string extraInfo = Console.ReadLine() ?? String.Empty;
 
                 IngredientsInfo ii = new IngredientsInfo(ingredient, quantity, extraInfo);
-                _ingredientsinfo.Add(ii);
+                IngredientsInfo.Add(ii);
                 }
             
 
@@ -83,14 +83,14 @@ public class Recipe
             } else
             {
             
-                _instructions.Add(instructions);
+                Instructions.Add(instructions);
             }
         }
     }
 
         public void DisplayIngredientsInfoItems()
     {
-        foreach (IngredientsInfo option in _ingredientsinfo)
+        foreach (IngredientsInfo option in IngredientsInfo)
         {
             option.DisplayIngredientsInfo();
 
@@ -99,7 +99,7 @@ public class Recipe
 
     public void DisplayInstructions()
     {
-        foreach (var item in _instructions)
+        foreach (var item in Instructions)
         {
             Console.WriteLine(item);
         }
@@ -108,7 +108,7 @@ public class Recipe
 
     public void DisplayRecipeName()
     {
-        Console.WriteLine(_name);
+        Console.WriteLine(Name);
     }
 
     public void DisplayRecipe()

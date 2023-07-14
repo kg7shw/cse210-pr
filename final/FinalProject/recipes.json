@@ -1,60 +1,60 @@
 [
   {
-    "name": "Chicken Curry",
-    "servingSize": "4",
-    "ingredientsinfo": [
+    "Name": "Chicken Curry",
+    "ServingSize": "4",
+    "IngredientsInfo": [
       {
-        "ingredient": "Chicken",
-        "quantity": "500g",
-        "extraInfo": "Boneless, cut into pieces"
+        "Ingredient": "Chicken",
+        "Quantity": "500g",
+        "ExtraInfo": "Boneless, cut into pieces"
       },
       {
-        "ingredient": "Onion",
-        "quantity": "1",
-        "extraInfo": "Large, finely chopped"
+        "Ingredient": "Onion",
+        "Quantity": "1",
+        "ExtraInfo": "Large, finely chopped"
       },
       {
-        "ingredient": "Tomato",
-        "quantity": "2",
-        "extraInfo": "Medium, diced"
+        "Ingredient": "Tomato",
+        "Quantity": "2",
+        "ExtraInfo": "Medium, diced"
       },
       {
-        "ingredient": "Garlic",
-        "quantity": "4 cloves",
-        "extraInfo": "Minced"
+        "Ingredient": "Garlic",
+        "Quantity": "4 cloves",
+        "ExtraInfo": "Minced"
       },
       {
-        "ingredient": "Ginger",
-        "quantity": "1-inch piece",
-        "extraInfo": "Grated"
+        "Ingredient": "Ginger",
+        "Quantity": "1-inch piece",
+        "ExtraInfo": "Grated"
       },
       {
-        "ingredient": "Curry Powder",
-        "quantity": "2 teaspoons",
-        "extraInfo": ""
+        "Ingredient": "Curry Powder",
+        "Quantity": "2 teaspoons",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Turmeric",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Turmeric",
+        "Quantity": "1/2 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Coconut Milk",
-        "quantity": "1 can",
-        "extraInfo": ""
+        "Ingredient": "Coconut Milk",
+        "Quantity": "1 can",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Salt",
-        "quantity": "To taste",
-        "extraInfo": ""
+        "Ingredient": "Salt",
+        "Quantity": "To taste",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Oil",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
+        "Ingredient": "Oil",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
+    "Instructions": [
       "Heat oil in a pan over medium heat.",
       "Add onions and cook until they become translucent.",
       "Add garlic and ginger, and sauté for a minute.",
@@ -67,56 +67,56 @@
     ]
   },
   {
-    "name": "Pancakes",
-    "servingSize": "4",
-    "ingredientsinfo": [
+    "Name": "Pancakes",
+    "ServingSize": "4",
+    "IngredientsInfo": [
       {
-        "ingredient": "All-Purpose Flour",
-        "quantity": "1 cup",
-        "extraInfo": ""
+        "Ingredient": "All-Purpose Flour",
+        "Quantity": "1 cup",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Milk",
-        "quantity": "1 cup",
-        "extraInfo": ""
+        "Ingredient": "Milk",
+        "Quantity": "1 cup",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Egg",
-        "quantity": "1",
-        "extraInfo": ""
+        "Ingredient": "Egg",
+        "Quantity": "1",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Sugar",
-        "quantity": "1 tablespoon",
-        "extraInfo": ""
+        "Ingredient": "Sugar",
+        "Quantity": "1 tablespoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Baking Powder",
-        "quantity": "1 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Baking Powder",
+        "Quantity": "1 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Salt",
-        "quantity": "1/4 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Salt",
+        "Quantity": "1/4 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Butter",
-        "quantity": "2 tablespoons",
-        "extraInfo": "Melted"
+        "Ingredient": "Butter",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": "Melted"
       },
       {
-        "ingredient": "Vanilla Extract",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Vanilla Extract",
+        "Quantity": "1/2 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Maple Syrup",
-        "quantity": "1 Bottle",
-        "extraInfo": ""
+        "Ingredient": "Maple Syrup",
+        "Quantity": "1 Bottle",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
+    "Instructions": [
       "In a mixing bowl, whisk together flour, sugar, baking powder, and salt.",
       "In a separate bowl, beat the egg. Add milk, melted butter, and vanilla extract. Whisk until well combined.",
       "Pour the wet ingredients into the dry ingredients. Stir until just combined; do not overmix.",
@@ -126,41 +126,41 @@
     ]
   },
   {
-    "name": "Hot Chocolate",
-    "servingSize": "2",
-    "ingredientsinfo": [
+    "Name": "Hot Chocolate",
+    "ServingSize": "2",
+    "IngredientsInfo": [
       {
-        "ingredient": "Milk",
-        "quantity": "2 cups",
-        "extraInfo": ""
+        "Ingredient": "Milk",
+        "Quantity": "2 cups",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Cocoa Powder",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
+        "Ingredient": "Cocoa Powder",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Sugar",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
+        "Ingredient": "Sugar",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Vanilla Extract",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Vanilla Extract",
+        "Quantity": "1/2 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Whipped Cream",
-        "quantity": "For topping",
-        "extraInfo": ""
+        "Ingredient": "Whipped Cream",
+        "Quantity": "For topping",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Chocolate Shavings",
-        "quantity": "For garnish",
-        "extraInfo": ""
+        "Ingredient": "Chocolate Shavings",
+        "Quantity": "For garnish",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
+    "Instructions": [
       "In a saucepan, heat the milk over medium heat until hot but not boiling.",
       "In a separate bowl, whisk together cocoa powder and sugar.",
       "Gradually add the cocoa powder mixture to the hot milk, whisking constantly until smooth and well combined.",
@@ -170,16 +170,16 @@
     ]
   },
   {
-    "name": "Bacon",
-    "servingSize": "2",
-    "ingredientsinfo": [
+    "Name": "Bacon",
+    "ServingSize": "2",
+    "IngredientsInfo": [
       {
-        "ingredient": "Bacon",
-        "quantity": "4 slices",
-        "extraInfo": ""
+        "Ingredient": "Bacon",
+        "Quantity": "4 slices",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
+    "Instructions": [
       "Preheat the oven to 400°F (200°C).",
       "Place the bacon slices in a single layer on a baking sheet.",
       "Bake for about 15-20 minutes or until crispy, flipping halfway through.",

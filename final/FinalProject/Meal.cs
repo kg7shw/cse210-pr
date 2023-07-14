@@ -1,8 +1,8 @@
 public class Meal
 {
-    private string _name { get; set; }
+    public string _name { get; set; }
 
-    List<Recipe> _recipes { get; set; } = new List<Recipe>();
+    public List<Recipe> _recipes { get; set; } = new List<Recipe>();
 
     public Meal()
     {

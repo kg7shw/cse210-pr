@@ -44,7 +44,7 @@ public class MealManager
         }
     }
 
-    public void DisplayMeal()
+    public void DisplayRecipes()
     {
         Console.WriteLine("---------------------------------");
         foreach (Recipe recipe in recipes)

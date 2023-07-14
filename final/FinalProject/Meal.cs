@@ -56,7 +56,14 @@ public class Meal
 
     public void DisplayMeal()
     {
-
+        Console.WriteLine("---------------------------------");
+        foreach (Recipe recipe in _recipes)
+        {
+            Console.WriteLine("+++++++++++++++++++++++++++++++");
+            recipe.DisplayRecipe();
+            Console.WriteLine("+++++++++++++++++++++++++++++++");
+        }
+        Console.WriteLine("---------------------------------");
     }
         
 

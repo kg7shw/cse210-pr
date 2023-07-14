@@ -99,8 +99,10 @@ public class Recipe
 
     public void DisplayInstructions()
     {
+        int i = 1;
         foreach (var item in Instructions)
         {
+            Console.Write($"{i++}. ");
             Console.WriteLine(item);
         }
     }

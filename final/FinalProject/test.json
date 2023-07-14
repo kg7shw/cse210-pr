@@ -1,190 +1,341 @@
 [
   {
-    "name": "Chicken Curry",
-    "servingSize": "4",
-    "ingredientsinfo": [
-      {
-        "ingredient": "Chicken",
-        "quantity": "500g",
-        "extraInfo": "Boneless, cut into pieces"
-      },
-      {
-        "ingredient": "Onion",
-        "quantity": "1",
-        "extraInfo": "Large, finely chopped"
-      },
-      {
-        "ingredient": "Tomato",
-        "quantity": "2",
-        "extraInfo": "Medium, diced"
-      },
-      {
-        "ingredient": "Garlic",
-        "quantity": "4 cloves",
-        "extraInfo": "Minced"
-      },
-      {
-        "ingredient": "Ginger",
-        "quantity": "1-inch piece",
-        "extraInfo": "Grated"
-      },
-      {
-        "ingredient": "Curry Powder",
-        "quantity": "2 teaspoons",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Turmeric",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Coconut Milk",
-        "quantity": "1 can",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Salt",
-        "quantity": "To taste",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Oil",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
-      }
+    "Name": "Scrambled Eggs",
+    "ServingSize": "1",
+    "IngredientsInfo": [
+      { "Ingredient": "Eggs", "Quantity": "2", "ExtraInfo": "" },
+      { "Ingredient": "Milk", "Quantity": "2 tablespoons", "ExtraInfo": "" },
+      { "Ingredient": "Salt", "Quantity": "1/4 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Pepper", "Quantity": "1/8 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Butter", "Quantity": "1 tablespoon", "ExtraInfo": "" }
     ],
-    "instructions": [
-      "Heat oil in a pan over medium heat.",
-      "Add onions and cook until they become translucent.",
-      "Add garlic and ginger, and sauté for a minute.",
-      "Add chicken pieces and cook until they are browned.",
-      "Add curry powder and turmeric. Stir well to coat the chicken.",
-      "Add diced tomatoes and cook for a few minutes until they soften.",
-      "Pour in the coconut milk and season with salt.",
-      "Simmer for about 20 minutes until the chicken is cooked through and the sauce thickens.",
-      "Serve hot with rice or naan bread."
+    "Instructions": [
+      "In a bowl, whisk together eggs, milk, salt, and pepper.",
+      "Heat butter in a non-stick pan over medium heat.",
+      "Pour the egg mixture into the pan.",
+      "Cook, stirring gently, until the eggs are set but still moist.",
+      "Remove from heat and serve hot."
     ]
   },
   {
-    "name": "Pancakes",
-    "servingSize": "4",
-    "ingredientsinfo": [
+    "Name": "Blueberry Pancakes",
+    "ServingSize": "2",
+    "IngredientsInfo": [
       {
-        "ingredient": "All-Purpose Flour",
-        "quantity": "1 cup",
-        "extraInfo": ""
+        "Ingredient": "All-purpose flour",
+        "Quantity": "1 cup",
+        "ExtraInfo": ""
       },
+      { "Ingredient": "Sugar", "Quantity": "2 tablespoons", "ExtraInfo": "" },
       {
-        "ingredient": "Milk",
-        "quantity": "1 cup",
-        "extraInfo": ""
+        "Ingredient": "Baking powder",
+        "Quantity": "2 teaspoons",
+        "ExtraInfo": ""
       },
+      { "Ingredient": "Salt", "Quantity": "1/2 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Milk", "Quantity": "3/4 cup", "ExtraInfo": "" },
+      { "Ingredient": "Egg", "Quantity": "1", "ExtraInfo": "" },
       {
-        "ingredient": "Egg",
-        "quantity": "1",
-        "extraInfo": ""
+        "Ingredient": "Butter",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": "Melted"
       },
-      {
-        "ingredient": "Sugar",
-        "quantity": "1 tablespoon",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Baking Powder",
-        "quantity": "1 teaspoon",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Salt",
-        "quantity": "1/4 teaspoon",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Butter",
-        "quantity": "2 tablespoons",
-        "extraInfo": "Melted"
-      },
-      {
-        "ingredient": "Vanilla Extract",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Maple Syrup",
-        "quantity": "1 Bottle",
-        "extraInfo": ""
-      }
+      { "Ingredient": "Blueberries", "Quantity": "1 cup", "ExtraInfo": "" }
     ],
-    "instructions": [
-      "In a mixing bowl, whisk together flour, sugar, baking powder, and salt.",
-      "In a separate bowl, beat the egg. Add milk, melted butter, and vanilla extract. Whisk until well combined.",
-      "Pour the wet ingredients into the dry ingredients. Stir until just combined; do not overmix.",
-      "Heat a non-stick pan or griddle over medium heat. Pour 1/4 cup of batter onto the pan for each pancake.",
-      "Cook until bubbles form on the surface, then flip the pancake and cook for another minute or until golden brown.",
-      "Serve the pancakes hot with maple syrup."
+    "Instructions": [
+      "In a bowl, whisk together flour, sugar, baking powder, and salt.",
+      "In a separate bowl, whisk together milk, egg, and melted butter.",
+      "Pour the milk mixture into the flour mixture and stir until just combined.",
+      "Gently fold in the blueberries.",
+      "Heat a griddle or non-stick pan over medium heat and lightly grease with butter or oil.",
+      "Pour 1/4 cup of batter onto the griddle for each pancake.",
+      "Cook until bubbles form on the surface, then flip and cook until golden brown.",
+      "Serve hot with maple syrup and additional blueberries, if desired."
     ]
   },
   {
-    "name": "Hot Chocolate",
-    "servingSize": "2",
-    "ingredientsinfo": [
+    "Name": "Bacon",
+    "ServingSize": "2",
+    "IngredientsInfo": [
+      { "Ingredient": "Bacon slices", "Quantity": "4", "ExtraInfo": "" }
+    ],
+    "Instructions": [
+      "Heat a skillet or frying pan over medium heat.",
+      "Place bacon slices in the pan and cook until crispy, flipping once.",
+      "Remove bacon from the pan and drain on paper towels.",
+      "Serve hot."
+    ]
+  },
+  {
+    "Name": "Hot Chocolate",
+    "ServingSize": "1",
+    "IngredientsInfo": [
+      { "Ingredient": "Milk", "Quantity": "1 cup", "ExtraInfo": "" },
       {
-        "ingredient": "Milk",
-        "quantity": "2 cups",
-        "extraInfo": ""
+        "Ingredient": "Cocoa powder",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Cocoa Powder",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
+        "Ingredient": "Sugar",
+        "Quantity": "1-2 tablespoons",
+        "ExtraInfo": "Adjust to taste"
       },
       {
-        "ingredient": "Sugar",
-        "quantity": "2 tablespoons",
-        "extraInfo": ""
+        "Ingredient": "Vanilla extract",
+        "Quantity": "1/2 teaspoon",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Vanilla Extract",
-        "quantity": "1/2 teaspoon",
-        "extraInfo": ""
+        "Ingredient": "Whipped cream",
+        "Quantity": "For topping",
+        "ExtraInfo": ""
       },
       {
-        "ingredient": "Whipped Cream",
-        "quantity": "For topping",
-        "extraInfo": ""
-      },
-      {
-        "ingredient": "Chocolate Shavings",
-        "quantity": "For garnish",
-        "extraInfo": ""
+        "Ingredient": "Chocolate shavings",
+        "Quantity": "For topping",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
-      "In a saucepan, heat the milk over medium heat until hot but not boiling.",
+    "Instructions": [
+      "In a saucepan, heat milk over medium-low heat until hot but not boiling.",
       "In a separate bowl, whisk together cocoa powder and sugar.",
-      "Gradually add the cocoa powder mixture to the hot milk, whisking constantly until smooth and well combined.",
-      "Remove from heat and stir in vanilla extract.",
-      "Pour the hot chocolate into mugs. Top with whipped cream and chocolate shavings.",
-      "Serve immediately."
+      "Gradually add the cocoa mixture to the hot milk, whisking constantly until well combined.",
+      "Stir in vanilla extract.",
+      "Pour the hot chocolate into a mug and top with whipped cream and chocolate shavings.",
+      "Serve hot."
     ]
   },
   {
-    "name": "Bacon",
-    "servingSize": "2",
-    "ingredientsinfo": [
+    "Name": "Waffles",
+    "ServingSize": "2",
+    "IngredientsInfo": [
       {
-        "ingredient": "Bacon",
-        "quantity": "4 slices",
-        "extraInfo": ""
+        "Ingredient": "All-purpose flour",
+        "Quantity": "1 cup",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Sugar", "Quantity": "2 tablespoons", "ExtraInfo": "" },
+      {
+        "Ingredient": "Baking powder",
+        "Quantity": "1 teaspoon",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Salt", "Quantity": "1/4 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Egg", "Quantity": "1", "ExtraInfo": "" },
+      { "Ingredient": "Milk", "Quantity": "3/4 cup", "ExtraInfo": "" },
+      {
+        "Ingredient": "Vegetable oil",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
       }
     ],
-    "instructions": [
-      "Preheat the oven to 400°F (200°C).",
-      "Place the bacon slices in a single layer on a baking sheet.",
-      "Bake for about 15-20 minutes or until crispy, flipping halfway through.",
-      "Remove from the oven and transfer the bacon to a paper towel-lined plate to drain excess grease.",
-      "Serve the bacon hot."
+    "Instructions": [
+      "In a bowl, whisk together flour, sugar, baking powder, and salt.",
+      "In a separate bowl, whisk together egg, milk, and vegetable oil.",
+      "Pour the milk mixture into the flour mixture and stir until just combined.",
+      "Preheat a waffle iron and lightly grease with oil or cooking spray.",
+      "Pour the batter onto the preheated waffle iron, spreading it evenly.",
+      "Close the waffle iron and cook until golden brown and crispy.",
+      "Serve hot with your favorite toppings, such as maple syrup or fresh fruits."
     ]
+  },
+  {
+    "Name": "Pizza",
+    "ServingSize": "1",
+    "IngredientsInfo": [
+      {
+        "Ingredient": "Pizza dough",
+        "Quantity": "1 portion",
+        "ExtraInfo": "Store-bought or homemade"
+      },
+      { "Ingredient": "Pizza sauce", "Quantity": "1/2 cup", "ExtraInfo": "" },
+      {
+        "Ingredient": "Mozzarella cheese",
+        "Quantity": "1 cup",
+        "ExtraInfo": "Shredded"
+      },
+      {
+        "Ingredient": "Toppings of your choice",
+        "Quantity": "As desired",
+        "ExtraInfo": "e.g., pepperoni, mushrooms, bell peppers, onions"
+      },
+      {
+        "Ingredient": "Dried oregano",
+        "Quantity": "To taste",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "Red pepper flakes",
+        "Quantity": "To taste",
+        "ExtraInfo": ""
+      }
+    ],
+    "Instructions": [
+      "Preheat the oven according to the instructions on the pizza dough package.",
+      "Roll out the pizza dough on a floured surface to your desired thickness.",
+      "Transfer the dough to a baking sheet or pizza stone.",
+      "Spread pizza sauce evenly over the dough, leaving a small border around the edges.",
+      "Sprinkle shredded mozzarella cheese over the sauce.",
+      "Add your favorite toppings, such as pepperoni, mushrooms, bell peppers, and onions.",
+      "Sprinkle dried oregano and red pepper flakes on top.",
+      "Bake in the preheated oven for the time specified on the pizza dough package, or until the cheese is melted and bubbly.",
+      "Remove from the oven and let it cool slightly before slicing.",
+      "Serve hot and enjoy!"
+    ]
+  },
+  {
+    "Name": "Brownies",
+    "ServingSize": "9",
+    "IngredientsInfo": [
+      {
+        "Ingredient": "Unsalted butter",
+        "Quantity": "1/2 cup",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "Granulated sugar",
+        "Quantity": "1 cup",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Eggs", "Quantity": "2", "ExtraInfo": "" },
+      {
+        "Ingredient": "Vanilla extract",
+        "Quantity": "1 teaspoon",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "All-purpose flour",
+        "Quantity": "1/3 cup",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Cocoa powder", "Quantity": "1/4 cup", "ExtraInfo": "" },
+      { "Ingredient": "Salt", "Quantity": "1/4 teaspoon", "ExtraInfo": "" },
+      {
+        "Ingredient": "Baking powder",
+        "Quantity": "1/4 teaspoon",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "Chopped nuts (optional)",
+        "Quantity": "1/2 cup",
+        "ExtraInfo": ""
+      }
+    ],
+    "Instructions": [
+      "Preheat the oven to 350\u00B0F (175\u00B0C) and grease a baking dish.",
+      "In a microwave-safe bowl, melt the butter.",
+      "In a separate mixing bowl, combine melted butter, sugar, eggs, and vanilla extract.",
+      "In another bowl, whisk together flour, cocoa powder, salt, and baking powder.",
+      "Gradually add the dry ingredients to the wet ingredients, stirring until just combined.",
+      "If desired, fold in chopped nuts.",
+      "Pour the batter into the greased baking dish and spread it evenly.",
+      "Bake for about 20-25 minutes, or until a toothpick inserted into the center comes out with a few moist crumbs.",
+      "Remove from the oven and let it cool completely before cutting into squares.",
+      "Serve and enjoy the delicious brownies!"
+    ]
+  },
+  {
+    "Name": "Spaghetti with Meatballs",
+    "ServingSize": "2",
+    "IngredientsInfo": [
+      { "Ingredient": "Spaghetti", "Quantity": "8 ounces", "ExtraInfo": "" },
+      { "Ingredient": "Ground beef", "Quantity": "1/2 pound", "ExtraInfo": "" },
+      { "Ingredient": "Bread crumbs", "Quantity": "1/4 cup", "ExtraInfo": "" },
+      {
+        "Ingredient": "Parmesan cheese",
+        "Quantity": "1/4 cup",
+        "ExtraInfo": "Grated"
+      },
+      { "Ingredient": "Egg", "Quantity": "1", "ExtraInfo": "" },
+      { "Ingredient": "Garlic", "Quantity": "2 cloves", "ExtraInfo": "Minced" },
+      { "Ingredient": "Tomato sauce", "Quantity": "2 cups", "ExtraInfo": "" },
+      {
+        "Ingredient": "Dried oregano",
+        "Quantity": "1 teaspoon",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Salt", "Quantity": "1/2 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Pepper", "Quantity": "1/4 teaspoon", "ExtraInfo": "" },
+      {
+        "Ingredient": "Olive oil",
+        "Quantity": "2 tablespoons",
+        "ExtraInfo": ""
+      }
+    ],
+    "Instructions": [
+      "Cook spaghetti according to package instructions.",
+      "In a mixing bowl, combine ground beef, bread crumbs, grated Parmesan cheese, egg, minced garlic, salt, and pepper.",
+      "Mix until well combined, then shape the mixture into meatballs.",
+      "Heat olive oil in a large skillet over medium heat.",
+      "Add meatballs to the skillet and cook until browned on all sides.",
+      "Remove meatballs from the skillet and set them aside.",
+      "In the same skillet, add tomato sauce, dried oregano, salt, and pepper.",
+      "Simmer the sauce for about 10 minutes to allow the flavors to meld.",
+      "Add the cooked meatballs to the sauce and simmer for an additional 5 minutes.",
+      "Serve the spaghetti with the meatballs and sauce on top.",
+      "Garnish with grated Parmesan cheese, if desired."
+    ]
+  },
+  {
+    "Name": "French Toast",
+    "ServingSize": "2",
+    "IngredientsInfo": [
+      { "Ingredient": "Bread slices", "Quantity": "4", "ExtraInfo": "" },
+      { "Ingredient": "Eggs", "Quantity": "2", "ExtraInfo": "" },
+      { "Ingredient": "Milk", "Quantity": "1/2 cup", "ExtraInfo": "" },
+      {
+        "Ingredient": "Vanilla extract",
+        "Quantity": "1/2 teaspoon",
+        "ExtraInfo": ""
+      },
+      { "Ingredient": "Cinnamon", "Quantity": "1/4 teaspoon", "ExtraInfo": "" },
+      { "Ingredient": "Butter", "Quantity": "2 tablespoons", "ExtraInfo": "" },
+      {
+        "Ingredient": "Maple syrup",
+        "Quantity": "For serving",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "Fresh berries",
+        "Quantity": "For serving",
+        "ExtraInfo": ""
+      },
+      {
+        "Ingredient": "Powdered sugar",
+        "Quantity": "For dusting",
+        "ExtraInfo": ""
+      }
+    ],
+    "Instructions": [
+      "In a shallow dish, whisk together eggs, milk, vanilla extract, and cinnamon.",
+      "Dip each bread slice into the egg mixture, allowing it to soak for a few seconds on each side.",
+      "In a skillet or frying pan, melt butter over medium heat.",
+      "Place the soaked bread slices in the pan and cook until golden brown on both sides.",
+      "Remove from the pan and transfer to serving plates.",
+      "Serve hot with maple syrup, fresh berries, and a dusting of powdered sugar."
+    ]
+  },
+  {
+    "Name": "Orange Juice",
+    "ServingSize": "1",
+    "IngredientsInfo": [
+      { "Ingredient": "Oranges", "Quantity": "2", "ExtraInfo": "" }
+    ],
+    "Instructions": [
+      "Squeeze the juice from the oranges into a glass using a citrus juicer or by hand.",
+      "Strain the juice to remove any pulp or seeds, if desired.",
+      "Serve the fresh orange juice immediately or refrigerate it until ready to serve.",
+      "Enjoy the refreshing taste of freshly squeezed orange juice!"
+    ]
+  },
+  {
+    "Name": "Water",
+    "ServingSize": null,
+    "IngredientsInfo": [
+      { "Ingredient": "Water", "Quantity": "8 oz", "ExtraInfo": "Chill" },
+      { "Ingredient": "Ice", "Quantity": "2 cubes", "ExtraInfo": "" }
+    ],
+    "Instructions": ["Add water to cup.", "Add Ice to water."]
   }
 ]

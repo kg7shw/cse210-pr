@@ -1,27 +1,27 @@
 public class RecipeBook
 {
-    List<Recipe> _recipes { get; set; } = new List<Recipe>();
+    public List<Recipe> RecipesList { get; set; } = new List<Recipe>();
     public void AddRecipe(Recipe r)
     {
-        _recipes.Add(r);
+        RecipesList.Add(r);
     }
 
     public List<Recipe> GetRecipeList()
     {
-        return _recipes;
+        return RecipesList;
     }
 
 
     public void SetRecipes(List<Recipe> newRecipes)
     {
-        _recipes = newRecipes;
+        RecipesList = newRecipes;
     }
 
     public void DisplayRecipes()
     {
 
         int i = 1;
-        foreach (Recipe option in _recipes)
+        foreach (Recipe option in RecipesList)
         {
             Console.Write($"{i++}. ");
             option.DisplayRecipeName();

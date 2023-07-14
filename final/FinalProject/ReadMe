@@ -1,0 +1,10 @@
+// Recipe Program
+// This program is args recipe program where users can input recipies and see them displayed.
+// It can also load a json file with repipes and display them to a screen.
+// The program offers 6 options:
+// 1. Add a recipe
+// 2. Make a meal
+// 3. Save recipes
+// 4. Load recipes
+// 5. Display Recipes
+// 6. Quit

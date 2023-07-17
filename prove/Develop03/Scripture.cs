@@ -4,16 +4,31 @@ public class Scripture
     private string _text;
     
     private List<Word> _words;
+    private List<Word> _hiddenWords;
+
     private Random _random;
 
-    public bool AllWordsHidden()
-    {
-        return _words.TrueForAll(word => word._IsHidden);
-    }
+    // public bool AllWordsHidden()
+    // {
+    //     foreach (Word word in _words)
+    //     {
+    //         if (word.GetIsHidden() == true)
+    //         {
+    //             continue;
+    //         } else
+    //         {
+    //             return true;
+    //         }
 
-    public Scripture(string reference, string text)
+    //     }
+
+    //     return false;
+    // }
+
+
+    public Scripture(string text)
     {
-        _reference = reference;
+        
         _text = text;
         _words = new List<Word>();
         _random = new Random();
@@ -41,7 +56,7 @@ public class Scripture
         foreach (Word word in _words)
         {
             if (word._IsHidden)
-                Console.Write("_ ");
+                Console.Write("______ ");
             else
                 Console.Write(word.GetText() + " ");
         }
@@ -51,14 +66,38 @@ public class Scripture
 
     public void HideRandomWord()
     {
-        List<Word> visibleWords = _words.FindAll(word => !word._IsHidden);
 
-        if (visibleWords.Count > 0)
-        {
-            int randomIndex = _random.Next(visibleWords.Count);
-            visibleWords[randomIndex].Hide();
-        }
+        // for (int i = 0; i <= 4; i++)
+        // {
+            var random = new Random();
+            var randomNumber = random.Next(0, _words.Count);
+            Word new_word = _words[randomNumber];
+            _hiddenWords.Add(new_word);
+            new_word.HideWord();
+                
+        // }
+
+
     }
+
+    public string CheckIsHidden()
+    {
+        foreach (Word word in _hiddenWords)
+        {
+            if (_words.Contains(word))
+            {
+                continue;
+            } else
+            {
+                return "";
+            }
+            
+        }
+        return "quit";
+
+    }
+
+
 }
 
 

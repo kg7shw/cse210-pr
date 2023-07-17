@@ -21,12 +21,12 @@ class Word
         return _IsHidden;
     }
 
-    public void SetHidden(bool hidden)
-    {
-        _IsHidden = hidden;
-    }
+    // public void SetHidden(bool hidden)
+    // {
+    //     _IsHidden = hidden;
+    // }
 
-    public void Hide()
+    public void HideWord()
     {
         _IsHidden = true;
     }

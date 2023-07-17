@@ -1,26 +1,25 @@
 public class Menu
 {
+    Scripture _scripture = new Scripture("John 3:16", "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
 
     public void DisplayMenu()
     {
 
-        bool quit = false;
-        while (!quit)
+        while (_scripture.AllWordsHidden() == false)
         {
-            
-            
-            DisplayScripture();
-            Console.Write("Press Enter or any Key to hide the words or 'quit' to exit: ");
-            string choice = Console.ReadLine();
+            // Console.Clear();
+            _scripture.Display();
 
-            
+            Console.Write("Press Enter to continue or type 'quit' to exit.");
+            string response = Console.ReadLine();
 
-            if (choice == "quit")   
-            {
-                quit = true;
-                Console.WriteLine("Have a nice day!");
-            } 
+            if (response.ToLower() == "quit")
+                {
+                    break;
+                }
+            _scripture.HideRandomWord();
 
+        }
 
 
             

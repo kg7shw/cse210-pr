@@ -4,7 +4,7 @@ public class Scripture
     private string _text;
     
     private List<Word> _words;
-    private List<Word> _hiddenWords;
+    private List<Word> _hiddenWords = new List<Word>();
 
     private Random _random;
 
@@ -67,24 +67,24 @@ public class Scripture
     public void HideRandomWord()
     {
 
-        // for (int i = 0; i <= 4; i++)
-        // {
+        for (int i = 0; i <= 4; i++)
+        {
             var random = new Random();
             var randomNumber = random.Next(0, _words.Count);
             Word new_word = _words[randomNumber];
             _hiddenWords.Add(new_word);
             new_word.HideWord();
                 
-        // }
+        }
 
 
     }
 
     public string CheckIsHidden()
     {
-        foreach (Word word in _hiddenWords)
+        foreach (Word word in _words)
         {
-            if (_words.Contains(word))
+            if (_hiddenWords.Contains(word))
             {
                 continue;
             } else
